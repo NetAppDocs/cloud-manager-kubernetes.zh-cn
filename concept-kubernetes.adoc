@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: concept-kubernetes.html 
+keywords: kubernetes, k8s, back up kubernetes, back up k8s, discover kubernetes cluster, discover k8s, amazon eks, eks, azure, aks, back up persistent volumes, persistent volumes, kubernetes support 
+summary: 将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。 
+---
+= Kubernetes 概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。
+
+
+
+== 功能
+
+* 将集群添加到 Canvas 中，以便在混合云基础架构中查看和管理它们
+* 使用 Cloud Backup Service 备份永久性卷
++
+image:screenshot-kubernetes-backup.png["Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。"]
+
+
+
+
+
+== 支持的 Kubernetes 部署
+
+Cloud Manager 支持在 Amazon Elastic Kubernetes Service （ Amazon EKS ）和 Microsoft Azure Kubernetes Service （ AKS ）中运行的受管 Kubernetes 集群。
+
+
+
+== 支持的后端存储
+
+必须在每个 Kubernetes 集群上安装 NetApp 的 Astra Trident ，并且必须将 Cloud Volumes ONTAP 配置为集群的后端存储。
+
+
+
+== 成本
+
+在 Cloud Manager 中发现您的 Kubernetes 集群不收取任何费用，但在使用 Cloud Backup Service 备份永久性卷时，系统会向您收取费用。

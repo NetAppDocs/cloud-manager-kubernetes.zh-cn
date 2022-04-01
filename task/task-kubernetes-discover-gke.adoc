@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: /task/task-kubernetes-discover-gke.html 
+keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, import kubernetes cluster, google, google cloud, gke, kubernetes support 
+summary: 您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Google Cloud 。 
+---
+= 将 Google Cloud Kubernetes 集群添加到 Cloud Manager
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Google Cloud 。
+
+
+
+== 发现集群
+
+您可以发现完全托管或自管理的 Kubernetes 集群。必须发现受管集群；无法导入这些集群。
+
+.步骤
+. 在 * 画布 * 上，单击 * 添加工作环境 * 。
+. 选择 * Google Cloud Platform* > * Kubernetes Cluster* ，然后单击 * 下一步 * 。
++
+image:screenshot-discover-kubernetes-gke.png["添加工作环境页面的屏幕截图，显示已选择 Google Cloud Platform 和 Kubernetes Cluster 。"]
+
+. 选择 * 发现集群 * ，然后单击 * 下一步 * 。
+. 要在其他 Google Cloud Project 中选择 Kubernetes 集群，请单击 * 编辑项目 * 并选择一个可用项目。
++
+image:screenshot-k8s-gke-change-project.png["\" 编辑项目 \" 页面的屏幕截图，显示可用 Google Cloud 项目的下拉列表。"]
+
+. 选择 Kubernetes 集群，然后单击 * 下一步 * 。
++
+image:screenshot-k8s-gke-discover.png["\" 发现 Kubernetes 集群 \" 页面的屏幕截图，其中显示了选定的 Kubernetes 集群。"]
+
+
+
+Cloud Manager 会将 Kubernetes 集群添加到 Canvas 。
+
+image:screenshot-k8s-gke-canvas.png["Cloud Manager 中的 Canvas 的屏幕截图，其中显示了 Kubernetes 集群。"]
+
+
+
+== 导入集群
+
+您可以使用 Kubernetes 配置文件导入自管理的 Kubernetes 集群。
+
+
+
+== 开始之前
+
+要导入 Kubernetes 集群，您需要为集群角色 YAML 文件中指定的用户提供证书颁发机构，客户端密钥和客户端证书证书。Kubernetes 集群管理员在 Kubernetes 集群上创建用户时会收到这些认证。
+
+.步骤
+. 在 * 画布 * 上，单击 * 添加工作环境 * 。
+. 选择 * Google Cloud Platform* > * Kubernetes Cluster* ，然后单击 * 下一步 * 。
+. 选择 * 导入集群 * ，然后单击 * 下一步 * 。
+. 上传 YAML 格式的 Kubernetes 配置文件。
++
+image:screenshot-k8s-gke-import-1.png["导入 Kubernetes 集群页面的屏幕截图，其中包含配置文件和可用集群表。"]
+
+
+
+Cloud Manager 会将 Kubernetes 集群添加到 Canvas 。

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="af145be510f242f7af2be251300750df" category="summary">了解 Cloud Manager 中 Kubernetes 的新增功能。</block>
+  <block id="89e53003b6d65a577fb8235b9bee8621" category="doc">Cloud Manager 中的 Kubernetes 新增功能</block>
+  <block id="f1c93420db258097a199364a47f6389a" category="section-title">2022 年 2 月 27 日</block>
+  <block id="572154af04ccf23551e78649302c6f7b" category="section-title">支持 Google Cloud 中的 Kubernetes 集群</block>
+  <block id="45cbe8fd766702dd0ad0022cbde336ce" category="paragraph">现在，您可以使用 Cloud Manager 在 Google Cloud 中添加和管理受管 Google Kubernetes Engine （ GKEE ）集群和自管 Kubernetes 集群。</block>
+  <block id="f1b377c7d4b75112665bc3e7ee7c340b" category="inline-link-macro">了解如何在 Google Cloud 中开始使用 Kubernetes 集群</block>
+  <block id="3ce827c1394c58f2881787b09251ab2d" category="paragraph"><block ref="e7cb8264f65fe12e2e34a432cb2daa9f" category="inline-link-macro-rx"></block>。</block>
+  <block id="323b3f6bd6f8fad6e54ac5e1413cf3dc" category="section-title">2022 年 1 月 11 日</block>
+  <block id="a654243ef958097102b375693f5579bb" category="section-title">支持 Azure 中的 Kubernetes 集群</block>
+  <block id="8856f1df28666fb615f0de120179dd80" category="paragraph">现在，您可以使用 Cloud Manager 在 Azure 中添加和管理受管 Azure Kubernetes 集群（ AKS ）和自管 Kubernetes 集群。</block>
+  <block id="8e2d16714747b48d3d5d0993c14ca91c" category="inline-link-macro">开始在 Azure 中使用 Kubernetes 集群</block>
+  <block id="2516f4b40f47332c7df68b7816e02b00" category="paragraph"><block ref="2516f4b40f47332c7df68b7816e02b00" category="inline-link-macro-rx"></block></block>
+  <block id="e7c5ad171298e38494ee7665c2b581e3" category="section-title">2021 年 11 月 28 日</block>
+  <block id="1dca9cae8959517f7a37b2277e33b485" category="section-title">支持 AWS 中的 Kubernetes 集群</block>
+  <block id="40396b2dd864537704e1a71862a49298" category="paragraph">现在，您可以将受管 Kubernetes 集群添加到 Cloud Manager 的 Canvas 中，以实现高级数据管理。</block>
+  <block id="9bc9d366922b7839c22a9d3f44b59ab5" category="list-text">发现 Amazon EKS 集群</block>
+  <block id="23225952418ffe65dda9099dae1c476c" category="list-text">使用 Cloud Backup 备份永久性卷</block>
+  <block id="d5f64dd836c164f17e32528a31fdeea5" category="inline-link-macro">了解有关 Kubernetes 支持的更多信息</block>
+  <block id="541ec813f320b6a90ccb3d382d774f7e" category="paragraph"><block ref="b46c52759a0e98b71be9f6aed99e1b0c" category="inline-link-macro-rx"></block>。</block>
+  <block id="5629dc3c8dacdcb31e6d3bf6d7586e32" category="admonition">现有 Kubernetes 服务（可通过 * K8* 选项卡访问）已弃用，并将在未来版本中删除。</block>
+  <block id="ccbd79a5bcab3e453f949ff4117b4275" category="summary">将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。</block>
+  <block id="4f64237bee72bb58ff4152fa48632885" category="doc">Kubernetes 概述</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
+  <block id="c5ec1386b558adcf3d52ae94e379e003" category="list-text">将集群添加到 Canvas 中，以便在混合云基础架构中查看和管理它们</block>
+  <block id="e93ee6ce2f667e494d48b99fc2c22728" category="list-text">使用 Cloud Backup Service 备份永久性卷</block>
+  <block id="a0d9f3ae32f1b7df23e0071308b6cbe5" category="inline-image-macro">Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。</block>
+  <block id="fdd5390b518e6b0ee63a9f6d25352e4d" category="paragraph"><block ref="fdd5390b518e6b0ee63a9f6d25352e4d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="acb13b8754d0f14e58090cb4826d589f" category="section-title">支持的 Kubernetes 部署</block>
+  <block id="6b7bfea0bd3da9dc242cb6bfd1641da6" category="paragraph">Cloud Manager 支持在 Amazon Elastic Kubernetes Service （ Amazon EKS ）和 Microsoft Azure Kubernetes Service （ AKS ）中运行的受管 Kubernetes 集群。</block>
+  <block id="c9ece1f2227c56942142d90092ca7fd2" category="section-title">支持的后端存储</block>
+  <block id="55a560dfd687efd2106430144cfa5892" category="paragraph">必须在每个 Kubernetes 集群上安装 NetApp 的 Astra Trident ，并且必须将 Cloud Volumes ONTAP 配置为集群的后端存储。</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
+  <block id="57d339f02c71bab84597b5d0376d3fc5" category="paragraph">在 Cloud Manager 中发现您的 Kubernetes 集群不收取任何费用，但在使用 Cloud Backup Service 备份永久性卷时，系统会向您收取费用。</block>
+  <block id="857ece793bdfd4681e9906a6a9eb9083" category="summary">在将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到 Cloud Manager 之前，您需要确保满足以下要求。</block>
+  <block id="b65741d409db3b7986653580cc3988b8" category="doc">AWS 中 Kubernetes 集群的要求</block>
+  <block id="b14cae3ee66d712266250a4e735f274a" category="paragraph">您可以将 AWS 上的受管 Amazon Elastic Kubernetes Service （ EKS ）集群或自管 Kubernetes 集群添加到 Cloud Manager 。在将集群添加到 Cloud Manager 之前，您需要确保满足以下要求。</block>
+  <block id="f56b205821b231a157cc0e3315bc72a6" category="paragraph">本主题使用 _Kubernetes cluster_ ，其中 EKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">要求</block>
+  <block id="086e6c16e3fe8e13c336612ef636aa02" category="list-text">Astra Trident</block>
+  <block id="b6edb134a14ab126456a8cf8495987f9" category="inline-link">有关安装步骤，请转至 Astra Trident 文档</block>
+  <block id="f71e85a659608075f0509b9338ee77b6" category="list-text">Kubernetes 集群必须安装 NetApp Astra Trident 。需要使用四个最新版本的 Astra Trident 之一。<block ref="96de5dd22941483be2f5e4e573125fc9" category="inline-link-rx"></block>。</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
+  <block id="f42c4f194d4364b14558c35f61d5d363" category="inline-link">有关配置步骤，请转至 Astra Trident 文档</block>
+  <block id="acc4a07cbf9763718c5eb67fd34340d7" category="list-text">Cloud Volumes ONTAP for AWS 必须设置为集群的后端存储。<block ref="0ffa37c66c18870214970164d37847a6" category="inline-link-rx"></block>。</block>
+  <block id="61c90d44785278f980592f082ef500f1" category="list-text">Cloud Manager Connector</block>
+  <block id="b33538162293d647c27336c767456660" category="inline-xref">在下方了解更多信息</block>
+  <block id="1657d67161bf0403482930d6cb81a5ba" category="list-text">必须使用所需权限在 AWS 中运行 Connector 。 <block ref="666096be9a7c0cee4f03722fd9c8c93c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="66a0461d2d8cd670baf00d1c2bb16adb" category="list-text">网络连接</block>
+  <block id="3ac74e864b0cfab242c223c39c9a410d" category="list-text">Kubernetes 集群和 Connector 之间以及 Kubernetes 集群和 Cloud Volumes ONTAP 之间需要网络连接。 <block ref="d3675c332862dea5fd502e53958a9814" category="inline-xref-macro-rx"></block>。</block>
+  <block id="8b31600cafa96c8a64d2b15606525b24" category="list-text">RBAC 授权</block>
+  <block id="c6dd30e443f98211931fb0916af6dad7" category="list-text">必须在每个 Kubernetes 集群上授权 Cloud Manager Connector 角色。 <block ref="ed89a5c7598981ce49ff49e89b6578d7" category="inline-xref-macro-rx"></block>。</block>
+  <block id="da8731bd4bc0634c2982581f97cbf070" category="section-title">准备连接器</block>
+  <block id="56b0ce7cc9f3d5ef200b0a0670aca457" category="paragraph">要发现和管理 Kubernetes 集群， AWS 需要使用 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。</block>
+  <block id="63959f97faa9987d540350850a41505e" category="section-title">创建新的 Connector</block>
+  <block id="7462e2b2097ede16db64534b30f77751" category="paragraph">按照以下链接之一中的步骤进行操作。</block>
+  <block id="a19a6ffe0bb158286b013144b83f6544" category="inline-link">从 Cloud Manager 创建 Connector</block>
+  <block id="ec14774524c6a2b7d2548129343136f7" category="list-text"><block ref="2817c24c841f5ada48665c37ffe210fe" category="inline-link-rx"></block> 建议</block>
+  <block id="e96bc5b1e40abf07ff070b96c65057db" category="inline-link">从 AWS Marketplace 创建 Connector</block>
+  <block id="e001c3794817ef05f699c8338c800782" category="list-text"><block ref="e001c3794817ef05f699c8338c800782" category="inline-link-rx"></block></block>
+  <block id="1bc7cdde75a8dfff8d21690bae5558b4" category="inline-link">在 AWS 的现有 Linux 主机上安装 Connector</block>
+  <block id="e8c4c9777375eaca1fbccc19cced0f47" category="list-text"><block ref="e8c4c9777375eaca1fbccc19cced0f47" category="inline-link-rx"></block></block>
+  <block id="400029e32a94249459e83aadc7247559" category="section-title">将所需权限添加到现有 Connector</block>
+  <block id="91377322d2f9077c583ad8a53facc870" category="paragraph">从 3.9.13 版开始，任何 _new_ 创建的 Connectors 均包含三个新的 AWS 权限，用于发现和管理 Kubernetes 集群。如果您在此版本之前创建了 Connector ，则需要修改此 Connector 的 IAM 角色的现有策略以提供权限。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
+  <block id="f724607cfeefa3c0719c729025f470e2" category="list-text">转至 AWS 控制台并打开 EC2 服务。</block>
+  <block id="4ae80e0fef4a25821edf680bfe5e78f1" category="list-text">选择 Connector 实例，单击 * 安全性 * ，然后单击 IAM 角色的名称以查看 IAM 服务中的角色。</block>
+  <block id="b5dbd801d99fd61c37c71bb1c6e8598d" category="inline-image-macro">AWS 控制台的屏幕截图，显示 Security 选项卡中 IAM 角色的名称。</block>
+  <block id="443963254a1729321efbfdbd4e2396c8" category="paragraph"><block ref="443963254a1729321efbfdbd4e2396c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="59524cf8612a689e4d9ed61067454937" category="list-text">在 * 权限 * 选项卡中，展开策略并单击 * 编辑策略 * 。</block>
+  <block id="4b1c304f38c097ba7776b76e4e099d42" category="inline-image-macro">AWS 控制台的屏幕截图，显示权限选项卡中的编辑策略按钮。</block>
+  <block id="845120e36ff1372b9be0014ef85d5ae6" category="paragraph"><block ref="845120e36ff1372b9be0014ef85d5ae6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f96de5b5f8572ecb3c2c80e8156181f8" category="list-text">单击 * 。 JSON* ，然后在第一组操作下添加以下权限：</block>
+  <block id="e72ae7637ee4c3c3135530cf7abf3ea9" category="inline-link">查看策略的完整 JSON 格式</block>
+  <block id="377d2375cdf41d8fe094ff8bcedcb12b" category="paragraph"><block ref="8eeee6ade5612bec522e249ee65dc7db" category="inline-link-rx"></block>。</block>
+  <block id="e42b9312c7c895b2124ac455c7ffecd4" category="list-text">单击 * 查看策略 * ，然后单击 * 保存更改 * 。</block>
+  <block id="1fd9ae23d87dd564d70e8a3a729edec0" category="section-title">查看网络连接要求</block>
+  <block id="a5a2f901b1e6769a95c7cafa0f439cd3" category="paragraph">您需要在 Kubernetes 集群和 Connector 之间以及 Kubernetes 集群与为集群提供后端存储的 Cloud Volumes ONTAP 系统之间提供网络连接。</block>
+  <block id="56e9d469c8477e6bb82ad093d3183ab1" category="list-text">每个 Kubernetes 集群都必须与 Connector 建立入站连接</block>
+  <block id="c5adca96e38b07f7e7639223721faa0d" category="list-text">此连接器必须通过端口 443 与每个 Kubernetes 集群建立出站连接</block>
+  <block id="def71c390b8b392e82f82a11e649e278" category="paragraph">提供此连接的最简单方法是，将连接器和 Cloud Volumes ONTAP 部署在与 Kubernetes 集群相同的 VPC 中。否则，您需要在不同的 VPC 之间设置 VPC 对等连接。</block>
+  <block id="7a906c5ea6addc67fc90c3ddd9bb398c" category="paragraph">以下示例显示了同一 VPC 中的每个组件。</block>
+  <block id="c748724ab2608f12017a5f5009be806c" category="inline-image-macro">EKS Kubernetes 集群及其与同一 VPC 中的连接和 Cloud Volumes ONTAP 的架构图。</block>
+  <block id="1d872cdbcf45bebdc1ef67eb923e83c3" category="paragraph"><block ref="1d872cdbcf45bebdc1ef67eb923e83c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="79517ea21ed6f08b98b060f838f73457" category="paragraph">下面是另一个示例，显示了一个 EKS 集群在其他 VPC 上运行。在此示例中， VPC 对等关系可在 EKS 集群的 VPC 与连接器和 Cloud Volumes ONTAP 的 VPC 之间提供连接。</block>
+  <block id="7b8db3f69d5bafb451e767f87793cb4b" category="inline-image-macro">EKS Kubernetes 集群的架构图及其与独立 VPC 中的连接和 Cloud Volumes ONTAP 的连接。</block>
+  <block id="f6671ef10e842ca53232fd0b982400b1" category="paragraph"><block ref="f6671ef10e842ca53232fd0b982400b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b9940ca80ae2598fdb5c6c402f1f1dc1" category="section-title">设置 RBAC 授权</block>
+  <block id="3af3ead39a5eec5783d926f19a9b6bfe" category="paragraph">您需要在每个 Kubernetes 集群上授权 Connector 角色，以便 Connector 可以发现和管理集群。</block>
+  <block id="33ebb2dacbde969dd24700b6e4dbe435" category="list-text">创建集群角色和角色绑定。</block>
+  <block id="220a9a1f63ae55426c0a1d2072d313ac" category="list-text">创建包含以下文本的 YAML 文件。</block>
+  <block id="26b09dacbaf5084bbe92bfa4d75feba8" category="list-text">将配置应用于集群。</block>
+  <block id="f08cfbb10dc9216a72c9d59da3c626b8" category="list-text">创建与权限组的标识映射。</block>
+  <block id="bcac99b7c9956d05f17a4e4f9649da71" category="open-title">使用 eksctl</block>
+  <block id="f7e12246f1ebd24c7f1a6460919e9bd3" category="paragraph">使用 eksctl 在集群与 Cloud Manager Connector 的 IAM 角色之间创建 IAM 身份映射。</block>
+  <block id="836c1d30babd0339206570a66bcbb4f3" category="inline-link">有关完整说明，请参见 eksctl 文档</block>
+  <block id="1e37bf365a6041e37e34936645ebc0a8" category="paragraph"><block ref="1119b51b5b352ff18c686869eb8e6d24" category="inline-link-rx"></block>。</block>
+  <block id="13225b5885ac45d1b5d3019c9de2e513" category="paragraph">下面提供了一个示例。</block>
+  <block id="a36cee8f656cd9e61ae5593885084071" category="open-title">编辑 AWS-auth</block>
+  <block id="de4e940a00cd2a48720f3f12fb53e9a7" category="paragraph">直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。</block>
+  <block id="434f77de052a92ee529d95ba80f3bab4" category="inline-link">有关完整说明，请参见 AWS EKS 文档</block>
+  <block id="05dcb2fa0de0a4549322d783d2f5e5fb" category="paragraph"><block ref="7af1dbb48bd59e8f995e1a97be9e70f8" category="inline-link-rx"></block>。</block>
+  <block id="58abfb994a75b4140edc2a973ec9a3dc" category="summary">您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine 集群（ GKEE ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。</block>
+  <block id="b6511d823d5fc5c8c219b52663e32c20" category="doc">Google Cloud 中的 Kubernetes 集群的要求</block>
+  <block id="5c24db37dbf4e9b0061b549aeed26cc0" category="paragraph">您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine （ GKEE ）集群和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。</block>
+  <block id="89acfe5365df26c5b2d9c418b9507492" category="paragraph">本主题使用 _Kubernetes cluster_ ，其中 GKE- 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。</block>
+  <block id="de99b3160528c7a2754f4c5dd4dbb80d" category="inline-link">有关使用 Helm 的安装步骤，请转至 Astra Trident 文档</block>
+  <block id="39b552ed633d800ed1446ff39c2a30b5" category="list-text">Kubernetes 集群必须已部署 NetApp Astra Trident 。使用 Helm 安装四个最新版本的 Astra Trident 之一。<block ref="fa49b53e52d430e79adf34c6f68f47be" category="inline-link-rx"></block>。</block>
+  <block id="1e7fd0342ed668ad1096d1c03fb7af17" category="list-text">Cloud Volumes ONTAP 必须与 Kubernetes 集群位于同一租户帐户，工作空间和连接器下的 Cloud Manager 中。<block ref="0ffa37c66c18870214970164d37847a6" category="inline-link-rx"></block>。</block>
+  <block id="529dbfeb8ae591bdc60b1e28dbcdacc6" category="list-text">必须使用所需权限在 Google 中运行 Connector 。 <block ref="666096be9a7c0cee4f03722fd9c8c93c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="6f9b9566eef8a735c30e29931c068a03" category="list-text">Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 GKE 集群上授权 Cloud Manager Connector 角色。 <block ref="ed89a5c7598981ce49ff49e89b6578d7" category="inline-xref-macro-rx"></block>。</block>
+  <block id="d6eac18df77e1a94121eca44e6d305a9" category="paragraph">要发现和管理 Kubernetes 集群，需要使用 Google 中的 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。</block>
+  <block id="51ab55b9b09987b2a41036d412c427a3" category="list-text"><block ref="d559be1fb712c0e3a1eb24a7ac2f5fb8" category="inline-link-rx"></block> 建议</block>
+  <block id="d1070a8b89935adc6bb191d1e912b5ca" category="inline-link">在现有 Linux 主机上安装 Connector</block>
+  <block id="5ebd5f6c069fcc937031e077c480b1a3" category="list-text"><block ref="5ebd5f6c069fcc937031e077c480b1a3" category="inline-link-rx"></block></block>
+  <block id="a7d3a387d14ffdcae3ba49d52638ebb6" category="section-title">将所需权限添加到现有 Connector （以发现受管 GKEE 集群）</block>
+  <block id="960373499947a97e65ed912d5cea84f4" category="paragraph">如果要发现受管 GKEE 集群，您可能需要修改 Connector 的自定义角色以提供权限。</block>
+  <block id="afcaeb8a33eef207414e875d7fa75193" category="inline-link-macro">云控制台</block>
+  <block id="c2460b8a49ca9d7a6f36222771d77ae4" category="list-text">在中 <block ref="90b0dbeec03910bdea419bc944660763" category="inline-link-macro-rx"></block>下，转到 * 角色 * 页面。</block>
+  <block id="cd94368c3fb0f5830daaa821b7867010" category="list-text">使用页面顶部的下拉列表，选择包含要编辑的角色的项目或组织。</block>
+  <block id="faca795779c0bd6b6eb9d726aeb9fe83" category="list-text">单击一个自定义角色。</block>
+  <block id="2179345c723745012afae6b2ce8b7947" category="list-text">单击 * 编辑角色 * 以更新角色的权限。</block>
+  <block id="7e040e62b5c02230db42032968c344e9" category="list-text">单击 * 添加权限 * 向角色添加以下新权限。</block>
+  <block id="f273c65d0ba8f909184bfc952d84c785" category="list-text">单击 * 更新 * 以保存已编辑的角色。</block>
+  <block id="4ea6815c06ab16d262a11d542884555b" category="paragraph">提供此连接的最简单方法是，将连接器和 Cloud Volumes ONTAP 部署在与 Kubernetes 集群相同的 VPC 中。否则，您需要在不同的 VPC 之间设置对等连接。</block>
+  <block id="05bc4a149efe412a22905c833852e387" category="inline-image-macro">AKS Kubernetes 集群及其与同一 VPC 中的连接和 Cloud Volumes ONTAP 的架构图。</block>
+  <block id="13280145aa7524cafe226edb3dc4196e" category="paragraph"><block ref="13280145aa7524cafe226edb3dc4196e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d759dad02da369efd695d04f42e3924" category="paragraph">RBAC 验证仅在启用了 Active Directory （ AD ）的 Kubernetes 集群上进行。不带 AD 的 Kubernetes 集群将自动通过验证。</block>
+  <block id="bbbbc9a2d885b7fef0cb7769ac9bd15e" category="paragraph">您需要在每个 Kubernetes 集群上授权 Connector 角色，以便 Connector 可以发现和管理集群。</block>
+  <block id="49ee45e42ddc3270d00a3ae449127441" category="paragraph">要在 YAML 文件中配置 ``s子对象： name ：`` ，您需要知道 Cloud Manager 的唯一 ID 。</block>
+  <block id="cd019ac58084ed8d44b9df88642ca80e" category="paragraph">您可以通过以下两种方式之一找到唯一 ID ：</block>
+  <block id="c9a8cfed4d445b66caae0401bc791f0d" category="list-text">使用命令：</block>
+  <block id="837b8b5111e480b693f744fec1804ccb" category="list-text">在上的服务帐户详细信息中 <block ref="90b0dbeec03910bdea419bc944660763" category="inline-link-macro-rx"></block>。</block>
+  <block id="4bf9575451981aabdb909c6a57da72cf" category="inline-image-macro">Cloud Console 中服务帐户详细信息的屏幕截图。</block>
+  <block id="ae62d39210641a9fb9c2dd38c13a2b07" category="paragraph"><block ref="ae62d39210641a9fb9c2dd38c13a2b07" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad4cf17755a22769adfcbfac8d05ece2" category="list-text">创建包含以下文本的 YAML 文件。将 ``ssubforjects ： kind ：`` 变量替换为您的用户名，将 ``ssubforjects ： user ：`` 替换为授权服务帐户的唯一 ID 。</block>
+  <block id="59926e95a1273af1eff3f3a8847d1286" category="summary">您可以使用 Cloud Manager 在 Azure 中添加和管理受管 Azure Kubernetes 集群（ AKS ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。</block>
+  <block id="c5be663296cc453aa3076c0cfcedc102" category="doc">Azure 中 Kubernetes 集群的要求</block>
+  <block id="39e746094f61257868fbdee54e708de3" category="paragraph">本主题使用 _Kubernetes cluster_ ，其中对于 AKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。</block>
+  <block id="bfa07c102504658f2166cb96f8328f96" category="list-text">必须将 Cloud Volumes ONTAP 设置为集群的后端存储。<block ref="0ffa37c66c18870214970164d37847a6" category="inline-link-rx"></block>。</block>
+  <block id="65a6ead622485d947a36632d3fbe81b8" category="list-text">Connector 必须使用所需权限在 Azure 中运行。 <block ref="666096be9a7c0cee4f03722fd9c8c93c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="0ab069b73427d83a2a8fc9c05092d504" category="list-text">Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 Azure 集群上授权 Cloud Manager Connector 角色。 <block ref="ed89a5c7598981ce49ff49e89b6578d7" category="inline-xref-macro-rx"></block>。</block>
+  <block id="eb0e851cde19636b32bfb756a21ff840" category="paragraph">要发现和管理 Kubernetes 集群，需要使用 Azure 中的 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。</block>
+  <block id="12ef67b6ab2d2853a436e5da856a6b17" category="list-text"><block ref="5cbf8900c78a1e8a979fc4f46f7d5fac" category="inline-link-rx"></block> 建议</block>
+  <block id="6505fd7495c0d65d3dcf8a473c69ddcf" category="inline-link">从 Azure Marketplace 创建 Connector</block>
+  <block id="bb931bec85a42f27f769f8bd1ee02a3a" category="list-text"><block ref="bb931bec85a42f27f769f8bd1ee02a3a" category="inline-link-rx"></block></block>
+  <block id="51024acb2d849b543d1d3b8ba5ac16fe" category="section-title">向现有 Connector 添加所需权限（以发现受管 AKS 集群）</block>
+  <block id="7b44ac8a40c4268ddeeb5c27394240a8" category="paragraph">如果要发现受管 AKS 集群，您可能需要修改 Connector 的自定义角色以提供权限。</block>
+  <block id="c6d0403561ba931925faedb251300c4d" category="list-text">确定分配给 Connector 虚拟机的角色：</block>
+  <block id="05f6eb25137f31106ee565f876bc1881" category="list-text">在 Azure 门户中，打开虚拟机服务。</block>
+  <block id="6391d178a2b7f97a4c5c12d28e3ee3e3" category="list-text">选择 Connector 虚拟机。</block>
+  <block id="7b4a4728ec382d2f88c1ebd2db0a0027" category="list-text">在设置下，选择 * 身份 * 。</block>
+  <block id="b506f23e6f5181789c57669fdd8ab051" category="list-text">单击 * Azure 角色分配 * 。</block>
+  <block id="c47d7faecd62443fbb2a5b4dd0d81989" category="list-text">记下分配给 Connector 虚拟机的自定义角色。</block>
+  <block id="10c89585572f5cd7f74b37ffd5122f8e" category="list-text">更新自定义角色：</block>
+  <block id="2645a92087be17f01996829dc7c0f75d" category="list-text">在 Azure 门户中，打开 Azure 订阅。</block>
+  <block id="a9eb814602d1b40f46b82878230e99e5" category="list-text">单击 * 访问控制（ IAM ） &gt; 角色 * 。</block>
+  <block id="e067d2382b356fe698b89336fbadacc9" category="list-text">单击自定义角色的省略号（ ... ），然后单击 * 编辑 * 。</block>
+  <block id="08054c8ee39ddd5116698bd17cecfaf1" category="list-text">单击 JSON 并添加以下权限：</block>
+  <block id="013bd8775ccd54f42d086e5e2e52fcde" category="list-text">单击 * 查看 + 更新 * ，然后单击 * 更新 * 。</block>
+  <block id="6f28e0e65a7c8bda53ced1380be75662" category="paragraph">提供此连接的最简单方法是，将 Connector 和 Cloud Volumes ONTAP 部署在与 Kubernetes 集群相同的 VNet 中。否则，您需要在不同的 VN 集之间设置对等连接。</block>
+  <block id="eebfc310716cba392a95ca2bce744854" category="paragraph">以下示例显示了同一 vNet 中的每个组件。</block>
+  <block id="3ed1eed13874cf71dd16bfa7a46e8add" category="paragraph"><block ref="3ed1eed13874cf71dd16bfa7a46e8add" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e66dda3d0579cab5c5b60decac6b615a" category="paragraph">下面是另一个示例，其中显示了一个 Kubernetes 集群运行在另一个 vNet 中。在此示例中，对等关系可在 Kubernetes 集群的 vNet 与 Connector 和 Cloud Volumes ONTAP 的 vNet 之间建立连接。</block>
+  <block id="6467a70d03cb8f90414ea4bf06aca703" category="inline-image-macro">一个 AKS Kubernetes 集群的架构图，以及它与独立 VPC 中的连接器和 Cloud Volumes ONTAP 的连接。</block>
+  <block id="78ec49be71e5a73ea42c464b0757bd9c" category="paragraph"><block ref="78ec49be71e5a73ea42c464b0757bd9c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="91940dfd4a354f338a2c6ffbbf52e86b" category="paragraph">您的 RBAC ``s对象： name ：`` 配置会根据您的 Kubernetes 集群类型稍有不同。</block>
+  <block id="5be58f4697ddee4cbc6b90938428b425" category="list-text">如果要部署 * 受管 AKS 集群 * ，则需要为 Connector 的系统分配的受管身份提供对象 ID 。此 ID 可在 Azure 管理门户中使用。</block>
+  <block id="787c8e09d4ba5342ce8f84b1af78b048" category="inline-image-macro">Azure 管理门户上系统分配的对象 ID 窗口的屏幕截图。</block>
+  <block id="0c90ae4dc73f81dbbd0a6e0299f5deb5" category="paragraph"><block ref="0c90ae4dc73f81dbbd0a6e0299f5deb5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4ebffaff3187e96f25bb8b4b25978bda" category="list-text">如果要部署 * 自管理 Kubernetes 集群 * ，则需要任何授权用户的用户名。</block>
+  <block id="333544b2aeb49831884a7faafb490e35" category="list-text">创建包含以下文本的 YAML 文件。将 ``ssubjects ： kind ：`` 变量替换为您的用户名，将 ``ssubjects ： user ：`` 替换为系统分配的受管身份的对象 ID 或上述任何授权用户的用户名。</block>
+  <block id="e59cbc41f2797427c91406bb0b03401e" category="summary">将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。</block>
+  <block id="d9348d075dc7b3c91cff99d56dfc327b" category="doc">Kubernetes 文档</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">有关 Cloud Manager 3.9 的注意事项</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="72999cd653b12474752fb77bab9691e3" category="inline-link-macro">Cloud Backup 注意事项</block>
+  <block id="75be9a02506771b87be972c89707f0d4" category="list-text"><block ref="75be9a02506771b87be972c89707f0d4" category="inline-link-macro-rx"></block></block>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">在向 NetApp 技术支持创建支持案例之前，您需要先将 NetApp 支持站点帐户添加到 Cloud Manager 中，然后注册获取支持。</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">注册以获得支持</block>
+  <block id="d53e2559d6ace0e907fc57192bf286b6" category="paragraph"><block ref="d53e2559d6ace0e907fc57192bf286b6" category="inline-link-macro-rx"></block></block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp 通过多种方式为 Cloud Manager 提供支持。全天候提供丰富的免费自助支持选项，例如知识库（ KB ）文章和社区论坛。您的支持注册包括通过 Web 服务单提供的远程技术支持。</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
+  <block id="7ccaf84febc0ed633fbdbadb8d488a7e" category="paragraph"><block ref="7ccaf84febc0ed633fbdbadb8d488a7e" category="inline-link-macro-rx"></block></block>
+  <block id="c29e915557a348fe22a7fb87b99ff164" category="summary">您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Google Cloud 。</block>
+  <block id="89e17d8d32acec475487fb1bd16fe4b8" category="doc">将 Google Cloud Kubernetes 集群添加到 Cloud Manager</block>
+  <block id="381ebbd947b85d55ba63ca069f4fd6e2" category="section-title">发现集群</block>
+  <block id="59e75b22101388124024ba384dec1f2d" category="paragraph">您可以发现完全托管或自管理的 Kubernetes 集群。必须发现受管集群；无法导入这些集群。</block>
+  <block id="b3077ecf2da7858bca9554a978d04da1" category="list-text">在 * 画布 * 上，单击 * 添加工作环境 * 。</block>
+  <block id="858e77f2f26c5391299a73161193d161" category="list-text">选择 * Google Cloud Platform* &gt; * Kubernetes Cluster* ，然后单击 * 下一步 * 。</block>
+  <block id="43fbe4a8201abe6b37503070f0c554c0" category="inline-image-macro">添加工作环境页面的屏幕截图，显示已选择 Google Cloud Platform 和 Kubernetes Cluster 。</block>
+  <block id="eb2d4b29a1f82dc5edd4825f3698ddd1" category="paragraph"><block ref="eb2d4b29a1f82dc5edd4825f3698ddd1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="85b561ece86eb3db6c1399eedd6f653e" category="list-text">选择 * 发现集群 * ，然后单击 * 下一步 * 。</block>
+  <block id="adf1c100cb8bc0e9f994246ae08c82e8" category="list-text">要在其他 Google Cloud Project 中选择 Kubernetes 集群，请单击 * 编辑项目 * 并选择一个可用项目。</block>
+  <block id="ae30908f664d4ec81d21dac8c0a3c463" category="inline-image-macro">" 编辑项目 " 页面的屏幕截图，显示可用 Google Cloud 项目的下拉列表。</block>
+  <block id="7bafd42600118bf9ad3665386e67c7ce" category="paragraph"><block ref="7bafd42600118bf9ad3665386e67c7ce" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="55606c8490a0c12205b4fbed9fb905b8" category="list-text">选择 Kubernetes 集群，然后单击 * 下一步 * 。</block>
+  <block id="4273385991c0997d8f662bc8ac479d62" category="inline-image-macro">" 发现 Kubernetes 集群 " 页面的屏幕截图，其中显示了选定的 Kubernetes 集群。</block>
+  <block id="3bd2670d36094d1a9176b6da93acb1bd" category="paragraph"><block ref="3bd2670d36094d1a9176b6da93acb1bd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5bf7f368a9365bdf96e2460568cee74e" category="paragraph">Cloud Manager 会将 Kubernetes 集群添加到 Canvas 。</block>
+  <block id="72ec0520aa9765fd692a1bc8c0d09dca" category="inline-image-macro">Cloud Manager 中的 Canvas 的屏幕截图，其中显示了 Kubernetes 集群。</block>
+  <block id="c0c08023cfcaa9b726920ee4dbad33cf" category="paragraph"><block ref="c0c08023cfcaa9b726920ee4dbad33cf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ae6e85cbb1634ffdeb3abf570a9264bc" category="section-title">导入集群</block>
+  <block id="4e8b848227e93eb2a419bf0e16f0b8f2" category="paragraph">您可以使用 Kubernetes 配置文件导入自管理的 Kubernetes 集群。</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="section-title">开始之前</block>
+  <block id="38d9ddcbf0dc2815705877c90303c234" category="paragraph">要导入 Kubernetes 集群，您需要为集群角色 YAML 文件中指定的用户提供证书颁发机构，客户端密钥和客户端证书证书。Kubernetes 集群管理员在 Kubernetes 集群上创建用户时会收到这些认证。</block>
+  <block id="6a172fac5b7b84be4bbdacac02e33cbd" category="list-text">选择 * 导入集群 * ，然后单击 * 下一步 * 。</block>
+  <block id="b695b2f49a50c3d925dc789182bc1070" category="list-text">上传 YAML 格式的 Kubernetes 配置文件。</block>
+  <block id="6e53f86d2931b115352479b77b41a90e" category="inline-image-macro">导入 Kubernetes 集群页面的屏幕截图，其中包含配置文件和可用集群表。</block>
+  <block id="c0051c23ce1a6dfb0a01449b18d415ad" category="paragraph"><block ref="c0051c23ce1a6dfb0a01449b18d415ad" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="546b680809febc3022d8385dde42cd09" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetApp 的云数据服务进行高级数据管理。</block>
+  <block id="e8cae55afec935b901fe515559f5c672" category="doc">将 NetApp 的云数据服务与 Kubernetes 集群结合使用</block>
+  <block id="88115501de56483f3bf8dd5514ce1d84" category="paragraph">目前， Kubernetes 集群支持 Cloud Backup 。您可以使用 Cloud Backup 将永久性卷备份到对象存储。</block>
+  <block id="963408f4aa8e949d60c3b0befc33267d" category="inline-link">转到 Cloud Backup 文档，了解如何备份永久性卷</block>
+  <block id="e77b635529c315242274245769062742" category="paragraph"><block ref="0cf41425f985f21dcce976508ef1a8db" category="inline-link-rx"></block>。</block>
+  <block id="a55035d13d56568118050b48f14c492f" category="summary">将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到 Cloud Manager 中，以便开始将永久性卷备份到 Amazon S3 。</block>
+  <block id="293e3749aa00f6ba4c48a0f2d8f93ba2" category="doc">将 Amazon Kubernetes 集群添加到 Cloud Manager</block>
+  <block id="52d46a61443272c06b413508e1c79b15" category="paragraph">您可以发现 Kubernetes clusers 或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Amazon S3 。</block>
+  <block id="29508a151c67e3d0dd86c039a47344fd" category="list-text">选择 * Amazon Web Services* &gt; * Kubernetes Cluster* ，然后单击 * 下一步 * 。</block>
+  <block id="d59c3e6f1bd8ff190720d2953c94c804" category="inline-image-macro">"Discover a Kubernetes Cluster" 页面的屏幕截图，其中显示了选定的 AWS 区域和 Kubernetes 集群。</block>
+  <block id="f8c9a10cf098481ef28aa7f25a7229aa" category="paragraph"><block ref="f8c9a10cf098481ef28aa7f25a7229aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ff2853c5c1f36238a0df55da68e45c91" category="list-text">选择 AWS 区域，选择 Kubernetes 集群，然后单击 * 下一步 * 。</block>
+  <block id="319ac76ffc37cba773f6bfe88644a59e" category="paragraph"><block ref="319ac76ffc37cba773f6bfe88644a59e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30565f5d14d9443c6a5427398c010386" category="paragraph"><block ref="30565f5d14d9443c6a5427398c010386" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7132ddadc6f50c922dca046957d31211" category="paragraph"><block ref="7132ddadc6f50c922dca046957d31211" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="208bc8f4c94339fa8fca1463c194cc66" category="list-text">选择 Kubernetes 集群，然后单击 * 下一步 * 。</block>
+  <block id="4daf3302949f55d163ff6eace44961b6" category="summary">将 Kubernetes 集群添加到 Cloud Manager 中，以便开始将永久性卷备份到 Azure 。</block>
+  <block id="83325e5c10337010f54c001b00275eaa" category="doc">将 Azure Kubernetes 集群添加到 Cloud Manager</block>
+  <block id="5d0a9c62c5db5ed8ae446b6a856052a1" category="paragraph">您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Azure 。</block>
+  <block id="74ee8afccfb46a392dec169f0956097b" category="list-text">选择 * Microsoft Azure* &gt; * Kubernetes Cluster* ，然后单击 * 下一步 * 。</block>
+  <block id="16a071ff29c08b2edb676685f737e0a0" category="inline-image-macro">"Add Working Environment" 页面的屏幕截图，其中显示了选定的 Microsoft Azure 和 Kubernetes 集群。</block>
+  <block id="d15187582d177bb14569cfabe373d93d" category="paragraph"><block ref="d15187582d177bb14569cfabe373d93d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="860ae4b6d7d8ee1a9456e45642a4a03b" category="paragraph"><block ref="860ae4b6d7d8ee1a9456e45642a4a03b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e8698f734d866235211caf16a5fcab94" category="paragraph"><block ref="e8698f734d866235211caf16a5fcab94" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bb45c01f0defa7d4025530e60da27413" category="list-text">上传 Kubernetes 集群管理员提供的集群证书。</block>
+  <block id="88191bdb31785cfc9f3930579c08bc01" category="inline-image-macro">用于上传证书颁发机构，客户端密钥和客户端证书的集群证书页面的屏幕截图。</block>
+  <block id="590894349703ecdfd70867c311b0ca06" category="paragraph"><block ref="590894349703ecdfd70867c311b0ca06" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
+  <block id="f583f925a6121ffc465f204cf97e47f2" category="sidebar">Kubernetes 文档</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
+  <block id="9a389df4347e021124f6973de0521d46" category="sidebar">了解 Kubernetes 数据管理</block>
+  <block id="73c4fdeb5f438f1ffabf7a3f70af610b" category="sidebar">AWS 上的 Kubernetes 集群</block>
+  <block id="054cd8bb1b3785f48a21cd04139835ad" category="sidebar">Azure 上的 Kubernetes 集群</block>
+  <block id="c5c9d7c185cc1b00668bfa872e46ab08" category="sidebar">Google Cloud 上的 Kubernetes 集群</block>
+  <block id="4d1d9b1ca507c58b501fe40d5773e8ee" category="sidebar">添加 Kubernetes 集群</block>
+  <block id="6e65026446a3f3b3ebb5471fa617ce29" category="sidebar">在 AWS 上添加集群</block>
+  <block id="2d1f9ee77fc479dfb743551a0245845f" category="sidebar">在 Azure 上添加集群</block>
+  <block id="ba9410f15dd19e0a92f5f4c2291636d6" category="sidebar">在 Google Cloud 上添加集群</block>
+  <block id="68cac9b88f3148d5dfe0e976ab311e4f" category="sidebar">在 Kubernetes 集群上启用数据服务</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
+  <block id="41e3782291be693bb1f948094d98229d" category="sidebar">启用数据服务</block>
+  <block id="2dabd9b7cd0dffe9c2c6b0cd979eb87a" category="sidebar">获取有关 Cloud Manager 的帮助</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客社区</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+</blocks>

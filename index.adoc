@@ -1,0 +1,15 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: Add your managed-Kubernetes clusters to Cloud Manager for advanced data management. 
+summary: 将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。 
+---
+= Kubernetes 文档
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

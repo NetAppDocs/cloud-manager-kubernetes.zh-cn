@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: /requirements/kubernetes-reqs-aks.html 
+keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, azure, aks, kubernetes support 
+summary: 您可以使用 Cloud Manager 在 Azure 中添加和管理受管 Azure Kubernetes 集群（ AKS ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。 
+---
+= Azure 中 Kubernetes 集群的要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Cloud Manager 在 Azure 中添加和管理受管 Azure Kubernetes 集群（ AKS ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。
+
+本主题使用 _Kubernetes cluster_ ，其中对于 AKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。
+
+
+
+== 要求
+
+Astra Trident:: Kubernetes 集群必须已部署 NetApp Astra Trident 。使用 Helm 安装四个最新版本的 Astra Trident 之一。 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html#deploy-the-trident-operator-by-using-helm["有关使用 Helm 的安装步骤，请转至 Astra Trident 文档"^]。
+Cloud Volumes ONTAP:: 必须将 Cloud Volumes ONTAP 设置为集群的后端存储。 https://docs.netapp.com/us-en/trident/trident-use/backends.html["有关配置步骤，请转至 Astra Trident 文档"^]。
+Cloud Manager Connector:: Connector 必须使用所需权限在 Azure 中运行。 <<Prepare a Connector,在下方了解更多信息>>。
+网络连接:: Kubernetes 集群和 Connector 之间以及 Kubernetes 集群和 Cloud Volumes ONTAP 之间需要网络连接。 <<Review networking requirements,在下方了解更多信息>>。
+RBAC 授权:: Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 Azure 集群上授权 Cloud Manager Connector 角色。 <<Set up RBAC authorization,在下方了解更多信息>>。
+
+
+
+
+== 准备连接器
+
+要发现和管理 Kubernetes 集群，需要使用 Azure 中的 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。
+
+
+
+=== 创建新的 Connector
+
+按照以下链接之一中的步骤进行操作。
+
+* https://docs.netapp.com/us-en/cloud-manager-connector/task-creating-connectors-azure.html["从 Cloud Manager 创建 Connector"^] 建议
+* https://docs.netapp.com/us-en/cloud-manager-connector/task-launching-azure-mktp.html["从 Azure Marketplace 创建 Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-connector/task-installing-linux.html["在现有 Linux 主机上安装 Connector"^]
+
+
+
+
+=== 向现有 Connector 添加所需权限（以发现受管 AKS 集群）
+
+如果要发现受管 AKS 集群，您可能需要修改 Connector 的自定义角色以提供权限。
+
+.步骤
+. 确定分配给 Connector 虚拟机的角色：
++
+.. 在 Azure 门户中，打开虚拟机服务。
+.. 选择 Connector 虚拟机。
+.. 在设置下，选择 * 身份 * 。
+.. 单击 * Azure 角色分配 * 。
+.. 记下分配给 Connector 虚拟机的自定义角色。
+
+
+. 更新自定义角色：
++
+.. 在 Azure 门户中，打开 Azure 订阅。
+.. 单击 * 访问控制（ IAM ） > 角色 * 。
+.. 单击自定义角色的省略号（ ... ），然后单击 * 编辑 * 。
+.. 单击 JSON 并添加以下权限：
++
+[source, json]
+----
+"Microsoft.ContainerService/managedClusters/listClusterUserCredential/action"
+"Microsoft.ContainerService/managedClusters/read"
+----
+.. 单击 * 查看 + 更新 * ，然后单击 * 更新 * 。
+
+
+
+
+
+
+== 查看网络连接要求
+
+您需要在 Kubernetes 集群和 Connector 之间以及 Kubernetes 集群与为集群提供后端存储的 Cloud Volumes ONTAP 系统之间提供网络连接。
+
+* 每个 Kubernetes 集群都必须与 Connector 建立入站连接
+* 此连接器必须通过端口 443 与每个 Kubernetes 集群建立出站连接
+
+
+提供此连接的最简单方法是，将 Connector 和 Cloud Volumes ONTAP 部署在与 Kubernetes 集群相同的 VNet 中。否则，您需要在不同的 VN 集之间设置对等连接。
+
+以下示例显示了同一 vNet 中的每个组件。
+
+image:diagram-kubernetes-azure.png["AKS Kubernetes 集群及其与同一 VPC 中的连接和 Cloud Volumes ONTAP 的架构图。"]
+
+下面是另一个示例，其中显示了一个 Kubernetes 集群运行在另一个 vNet 中。在此示例中，对等关系可在 Kubernetes 集群的 vNet 与 Connector 和 Cloud Volumes ONTAP 的 vNet 之间建立连接。
+
+image:diagram-kubernetes-azure-with-peering.png["一个 AKS Kubernetes 集群的架构图，以及它与独立 VPC 中的连接器和 Cloud Volumes ONTAP 的连接。"]
+
+
+
+== 设置 RBAC 授权
+
+RBAC 验证仅在启用了 Active Directory （ AD ）的 Kubernetes 集群上进行。不带 AD 的 Kubernetes 集群将自动通过验证。
+
+您需要在每个 Kubernetes 集群上授权 Connector 角色，以便 Connector 可以发现和管理集群。
+
+您的 RBAC ``s对象： name ：`` 配置会根据您的 Kubernetes 集群类型稍有不同。
+
+* 如果要部署 * 受管 AKS 集群 * ，则需要为 Connector 的系统分配的受管身份提供对象 ID 。此 ID 可在 Azure 管理门户中使用。
++
+image:screenshot-k8s-aks-obj-id.png["Azure 管理门户上系统分配的对象 ID 窗口的屏幕截图。"]
+
+* 如果要部署 * 自管理 Kubernetes 集群 * ，则需要任何授权用户的用户名。
+
+
+创建集群角色和角色绑定。
+
+. 创建包含以下文本的 YAML 文件。将 ``ssubjects ： kind ：`` 变量替换为您的用户名，将 ``ssubjects ： user ：`` 替换为系统分配的受管身份的对象 ID 或上述任何授权用户的用户名。
++
+[source, yaml]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+    name: cloudmanager-access-clusterrole
+rules:
+    - apiGroups:
+          - ''
+      resources:
+          - secrets
+          - namespaces
+          - persistentvolumeclaims
+          - persistentvolumes
+      verbs:
+          - get
+          - list
+          - create
+    - apiGroups:
+          - storage.k8s.io
+      resources:
+          - storageclasses
+      verbs:
+          - get
+          - list
+    - apiGroups:
+          - trident.netapp.io
+      resources:
+          - tridentbackends
+          - tridentorchestrators
+      verbs:
+          - get
+          - list
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: k8s-access-binding
+subjects:
+    - kind: User
+      name: Object (principal) ID (for AKS) or username (for self-managed)
+      apiGroup: rbac.authorization.k8s.io
+roleRef:
+    kind: ClusterRole
+    name: cloudmanager-access-clusterrole
+    apiGroup: rbac.authorization.k8s.io
+----
+. 将配置应用于集群。
++
+[source, kubectl]
+----
+kubectl apply -f <file-name>
+----
+

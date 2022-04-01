@@ -1,0 +1,166 @@
+---
+sidebar: sidebar 
+permalink: /requirements/kubernetes-reqs-gke.html 
+keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, google, google cloud, gke, kubernetes support 
+summary: 您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine 集群（ GKEE ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。 
+---
+= Google Cloud 中的 Kubernetes 集群的要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine （ GKEE ）集群和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。
+
+本主题使用 _Kubernetes cluster_ ，其中 GKE- 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。
+
+
+
+== 要求
+
+Astra Trident:: Kubernetes 集群必须已部署 NetApp Astra Trident 。使用 Helm 安装四个最新版本的 Astra Trident 之一。 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html#deploy-the-trident-operator-by-using-helm["有关使用 Helm 的安装步骤，请转至 Astra Trident 文档"^]。
+Cloud Volumes ONTAP:: Cloud Volumes ONTAP 必须与 Kubernetes 集群位于同一租户帐户，工作空间和连接器下的 Cloud Manager 中。 https://docs.netapp.com/us-en/trident/trident-use/backends.html["有关配置步骤，请转至 Astra Trident 文档"^]。
+Cloud Manager Connector:: 必须使用所需权限在 Google 中运行 Connector 。 <<Prepare a Connector,在下方了解更多信息>>。
+网络连接:: Kubernetes 集群和 Connector 之间以及 Kubernetes 集群和 Cloud Volumes ONTAP 之间需要网络连接。 <<Review networking requirements,在下方了解更多信息>>。
+RBAC 授权:: Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 GKE 集群上授权 Cloud Manager Connector 角色。 <<Set up RBAC authorization,在下方了解更多信息>>。
+
+
+
+
+== 准备连接器
+
+要发现和管理 Kubernetes 集群，需要使用 Google 中的 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。
+
+
+
+=== 创建新的 Connector
+
+按照以下链接之一中的步骤进行操作。
+
+* https://docs.netapp.com/us-en/cloud-manager-connector/task-creating-connectors-gcp.html["从 Cloud Manager 创建 Connector"^] 建议
+* https://docs.netapp.com/us-en/cloud-manager-connector/task-installing-linux.html["在现有 Linux 主机上安装 Connector"^]
+
+
+
+
+=== 将所需权限添加到现有 Connector （以发现受管 GKEE 集群）
+
+如果要发现受管 GKEE 集群，您可能需要修改 Connector 的自定义角色以提供权限。
+
+.步骤
+. 在中 link:https://console.cloud.google.com["云控制台"^]下，转到 * 角色 * 页面。
+. 使用页面顶部的下拉列表，选择包含要编辑的角色的项目或组织。
+. 单击一个自定义角色。
+. 单击 * 编辑角色 * 以更新角色的权限。
+. 单击 * 添加权限 * 向角色添加以下新权限。
++
+[source, json]
+----
+container.clusters.get
+container.clusters.list
+----
+. 单击 * 更新 * 以保存已编辑的角色。
+
+
+
+
+== 查看网络连接要求
+
+您需要在 Kubernetes 集群和 Connector 之间以及 Kubernetes 集群与为集群提供后端存储的 Cloud Volumes ONTAP 系统之间提供网络连接。
+
+* 每个 Kubernetes 集群都必须与 Connector 建立入站连接
+* 此连接器必须通过端口 443 与每个 Kubernetes 集群建立出站连接
+
+
+提供此连接的最简单方法是，将连接器和 Cloud Volumes ONTAP 部署在与 Kubernetes 集群相同的 VPC 中。否则，您需要在不同的 VPC 之间设置对等连接。
+
+以下示例显示了同一 VPC 中的每个组件。
+
+image:diagram-kubernetes-google-cloud.png["AKS Kubernetes 集群及其与同一 VPC 中的连接和 Cloud Volumes ONTAP 的架构图。"]
+
+
+
+== 设置 RBAC 授权
+
+RBAC 验证仅在启用了 Active Directory （ AD ）的 Kubernetes 集群上进行。不带 AD 的 Kubernetes 集群将自动通过验证。
+
+您需要在每个 Kubernetes 集群上授权 Connector 角色，以便 Connector 可以发现和管理集群。
+
+要在 YAML 文件中配置 ``s子对象： name ：`` ，您需要知道 Cloud Manager 的唯一 ID 。
+
+您可以通过以下两种方式之一找到唯一 ID ：
+
+* 使用命令：
++
+[source, JSON]
+----
+gcloud iam service-accounts list
+gcloud iam service-accounts describe <service-account-email>
+----
+* 在上的服务帐户详细信息中 link:https://console.cloud.google.com["云控制台"^]。
++
+image:screenshot-gke-unique-id.png["Cloud Console 中服务帐户详细信息的屏幕截图。"]
+
+
+
+创建集群角色和角色绑定。
+
+. 创建包含以下文本的 YAML 文件。将 ``ssubforjects ： kind ：`` 变量替换为您的用户名，将 ``ssubforjects ： user ：`` 替换为授权服务帐户的唯一 ID 。
++
+[source, yaml]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+    name: cloudmanager-access-clusterrole
+rules:
+    - apiGroups:
+          - ''
+      resources:
+          - secrets
+          - namespaces
+          - persistentvolumeclaims
+          - persistentvolumes
+      verbs:
+          - get
+          - list
+          - create
+    - apiGroups:
+          - storage.k8s.io
+      resources:
+          - storageclasses
+      verbs:
+          - get
+          - list
+    - apiGroups:
+          - trident.netapp.io
+      resources:
+          - tridentbackends
+          - tridentorchestrators
+      verbs:
+          - get
+          - list
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: k8s-access-binding
+subjects:
+    - kind: User
+      name: "uniqueID"
+      apiGroup: rbac.authorization.k8s.io
+roleRef:
+    kind: ClusterRole
+    name: cloudmanager-access-clusterrole
+    apiGroup: rbac.authorization.k8s.io
+----
+. 将配置应用于集群。
++
+[source, kubectl]
+----
+kubectl apply -f <file-name>
+----
+

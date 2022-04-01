@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: /task/task-kubernetes-enable-services.html 
+keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, amazon eks, eks, kubernetes support 
+summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetApp 的云数据服务进行高级数据管理。 
+---
+= 将 NetApp 的云数据服务与 Kubernetes 集群结合使用
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetApp 的云数据服务进行高级数据管理。
+
+目前， Kubernetes 集群支持 Cloud Backup 。您可以使用 Cloud Backup 将永久性卷备份到对象存储。
+
+https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-kubernetes-to-s3.html["转到 Cloud Backup 文档，了解如何备份永久性卷"^]。
+
+image:screenshot-kubernetes-backup.png["Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。"]
