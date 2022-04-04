@@ -13,7 +13,7 @@ summary: 将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到
 
 
 [role="lead"]
-您可以发现 Kubernetes clusers 或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Amazon S3 。
+您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Amazon S3 。
 
 
 

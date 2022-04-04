@@ -21,7 +21,11 @@ summary: 在将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加
 
 == 要求
 
-Astra Trident:: Kubernetes 集群必须安装 NetApp Astra Trident 。需要使用四个最新版本的 Astra Trident 之一。 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["有关安装步骤，请转至 Astra Trident 文档"^]。
+Astra Trident:: 需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["查看前提条件"^] 安装 Astra Trident 之前。
+
+
+要升级 Astra Trident ， link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html["使用操作员升级"^]。
+
 Cloud Volumes ONTAP:: Cloud Volumes ONTAP for AWS 必须设置为集群的后端存储。 https://docs.netapp.com/us-en/trident/trident-use/backends.html["有关配置步骤，请转至 Astra Trident 文档"^]。
 Cloud Manager Connector:: 必须使用所需权限在 AWS 中运行 Connector 。 <<Prepare a Connector,在下方了解更多信息>>。
 网络连接:: Kubernetes 集群和 Connector 之间以及 Kubernetes 集群和 Cloud Volumes ONTAP 之间需要网络连接。 <<Review networking requirements,在下方了解更多信息>>。
@@ -40,9 +44,9 @@ RBAC 授权:: 必须在每个 Kubernetes 集群上授权 Cloud Manager Connector
 
 按照以下链接之一中的步骤进行操作。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["从 Cloud Manager 创建 Connector"^] 建议
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-aws-mktp.html["从 AWS Marketplace 创建 Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在 AWS 的现有 Linux 主机上安装 Connector"^]
+* link:task_creating_connectors_aws.html["从 Cloud Manager 创建 Connector"] 建议
+* link:task_launching_aws_mktp.html["从 AWS Marketplace 创建 Connector"]
+* link:task_installing_linux.html["在 AWS 的现有 Linux 主机上安装 Connector"]
 
 
 
@@ -59,7 +63,7 @@ image:screenshot-aws-iam-role.png["AWS 控制台的屏幕截图，显示 Securit
 
 . 在 * 权限 * 选项卡中，展开策略并单击 * 编辑策略 * 。
 +
-image:../media/screenshot-aws-edit-policy.png["AWS 控制台的屏幕截图，显示权限选项卡中的编辑策略按钮。"]
+image:screenshot-aws-edit-policy.png["AWS 控制台的屏幕截图，显示权限选项卡中的编辑策略按钮。"]
 
 . 单击 * 。 JSON* ，然后在第一组操作下添加以下权限：
 +
@@ -101,11 +105,30 @@ image:diagram_kubernetes.png["EKS Kubernetes 集群的架构图及其与独立 V
 
 您需要在每个 Kubernetes 集群上授权 Connector 角色，以便 Connector 可以发现和管理集群。
 
+要启用不同的功能，需要不同的授权。
+
+备份和还原:: 备份和还原只需要基本授权。
+添加存储类:: 要使用 Cloud Manager 添加存储类，需要扩展授权。
+安装 Astra Trident:: 要安装 Astra Trident ，您需要为 Cloud Manager 提供完全授权。
++
+--
+
+NOTE: 安装 Astra Trident 时， Cloud Manager 会安装 Astra Trident 后端和 Kubernetes 密钥，其中包含 Astra Trident 与存储集群通信所需的凭据。
+
+--
+
+
 .步骤
 . 创建集群角色和角色绑定。
 +
-.. 创建包含以下文本的 YAML 文件。
+.. 根据您的授权要求创建包含以下文本的 YAML 文件。
 +
+[role="tabbed-block"]
+====
+.备份 / 还原
+--
+添加基本授权，以便为 Kubernetes 集群启用备份和还原。
+
 [source, yaml]
 ----
 apiVersion: rbac.authorization.k8s.io/v1
@@ -116,12 +139,28 @@ rules:
     - apiGroups:
           - ''
       resources:
-          - secrets
           - namespaces
-          - persistentvolumeclaims
+      verbs:
+          - list
+    - apiGroups:
+          - ''
+      resources:
           - persistentvolumes
       verbs:
+          - list
+    - apiGroups:
+          - ''
+      resources:
+          - pods
+          - pods/exec
+      verbs:
           - get
+          - list
+    - apiGroups:
+          - ''
+      resources:
+          - persistentvolumeclaims
+      verbs:
           - list
           - create
     - apiGroups:
@@ -129,16 +168,19 @@ rules:
       resources:
           - storageclasses
       verbs:
-          - get
           - list
     - apiGroups:
           - trident.netapp.io
       resources:
           - tridentbackends
+      verbs:
+          - list
+    - apiGroups:
+          - trident.netapp.io
+      resources:
           - tridentorchestrators
       verbs:
           - get
-          - list
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -153,6 +195,78 @@ roleRef:
     name: cloudmanager-access-clusterrole
     apiGroup: rbac.authorization.k8s.io
 ----
+--
+.存储类
+--
+添加扩展授权以使用 Cloud Manager 添加存储类。
+
+[source, yaml]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+    name: cloudmanager-access-clusterrole
+rules:
+    - apiGroups:
+          - ''
+      resources:
+          - secrets
+          - namespaces
+          - persistentvolumeclaims
+          - persistentvolumes
+          - pods
+          - pods/exec
+      verbs:
+          - get
+          - list
+          - create
+          - delete
+    - apiGroups:
+          - storage.k8s.io
+      resources:
+          - storageclasses
+      verbs:
+          - get
+          - create
+          - list
+          - delete
+          - patch
+    - apiGroups:
+          - trident.netapp.io
+      resources:
+          - tridentbackends
+          - tridentorchestrators
+          - tridentbackendconfigs
+      verbs:
+          - get
+          - list
+          - create
+          - delete
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: k8s-access-binding
+subjects:
+    - kind: Group
+      name: cloudmanager-access-group
+      apiGroup: rbac.authorization.k8s.io
+roleRef:
+    kind: ClusterRole
+    name: cloudmanager-access-clusterrole
+    apiGroup: rbac.authorization.k8s.io
+----
+--
+.安装 Trident
+--
+使用命令行提供完全授权并启用 Cloud Manager 以安装 Astra Trident 。
+
+[source, cli]
+----
+eksctl create iamidentitymapping --cluster < > --region < > --arn < > --group "system:masters" --username system:node:{{EC2PrivateDNSName}}
+----
+--
+====
 .. 将配置应用于集群。
 +
 [source, kubectl]
@@ -161,49 +275,13 @@ kubectl apply -f <file-name>
 ----
 
 
-. 创建与权限组的标识映射。
+. 使用 `eksctl` 创建与权限组的标识映射。下面提供了一个示例。
 +
-[role="tabbed-block"]
-====
-.使用 eksctl
---
-使用 eksctl 在集群与 Cloud Manager Connector 的 IAM 角色之间创建 IAM 身份映射。
-
-https://eksctl.io/usage/iam-identity-mappings/["有关完整说明，请参见 eksctl 文档"^]。
-
-下面提供了一个示例。
-
 [source, eksctl]
 ----
 eksctl create iamidentitymapping --cluster <eksCluster> --region <us-east-2> --arn <ARN of the Connector IAM role> --group cloudmanager-access-group --username system:node:{{EC2PrivateDNSName}}
 ----
---
-.编辑 AWS-auth
---
-直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。
++
+https://eksctl.io/usage/iam-identity-mappings/["有关完整说明，请参见 eksctl 文档"^]。
 
-https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html["有关完整说明，请参见 AWS EKS 文档"^]。
-
-下面提供了一个示例。
-
-[source, yaml]
-----
-apiVersion: v1
-data:
-  mapRoles: |
-    - groups:
-      - cloudmanager-access-group
-      rolearn: <ARN of the Connector IAM role>
-     username: system:node:{{EC2PrivateDNSName}}
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2021-09-30T21:09:18Z"
-  name: aws-auth
-  namespace: kube-system
-  resourceVersion: "1021"
-  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
-  uid: dcc31de5-3838-11e8-af26-02e00430057c
-----
---
-====
 

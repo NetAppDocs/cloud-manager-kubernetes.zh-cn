@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: concept-manage-k8s.html 
+keywords: overview, manage, k8s, kubernetes 
+summary: 您可以使用 Cloud Manager 安装 Astra Trident ，配置存储类，删除集群以及启用数据服务。 
+---
+= 管理 Kubernetes 集群
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+您可以使用 Cloud Manager 安装 Astra Trident ，配置存储类，删除集群以及启用数据服务。
+
+
+
+== 功能
+
+将 Kubernetes 集群添加到 Cloud Manager 后，您可以从资源页面管理这些集群。要打开资源页面，请双击 Canvas 上的 Kubernetes 工作环境。
+
+image:screenshot-k8s-resource-page.png["显示集群详细信息的 Kubernetes 资源页面的屏幕截图。"]
+
+在资源页面中，您可以：
+
+* 查看 Kubernetes 集群状态。
+* 确认已安装 Astra Trident 。请参见 link:task-k8s-manage-trident.html["安装 Astra Trident"]。
+* 添加和删除存储类。请参见 link:task-k8s-manage-storage-classes.html["管理存储类"]。
+* 查看永久性卷。请参见 link:task-k8s-manage-persistent-volumes.html["查看永久性卷"]。
+* 从工作空间中删除 Kubernetes 集群。请参见 link:task-k8s-manage-remove-cluster.html["删除集群"]。
+* 激活或查看 Cloud Backup 。请参见 link:task-kubernetes-enable-services.html["使用 NetApp 云数据服务"]。
+

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: /task/task-k8s-manage-remove-cluster.html 
+keywords: kubernetes, k8s, remove cluster 
+summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 从工作空间中删除集群。 
+---
+= 从工作空间中删除 Kubernetes 集群
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 从工作空间中删除集群。
+
+.步骤
+. 双击 Canvas 上的 Kubernetes 工作环境或单击 * 进入工作环境 * 。
+. 在页面右上角，选择操作菜单，然后单击 * 从工作空间中删除 * 。
++
+image:screenshot-k8s-remove-cluster.png["屏幕截图显示了用于从工作空间中删除 Kubernetes 集群的菜单。"]
+
+. 单击 * 删除 * 确认从工作空间中删除集群。您可以随时重新发现此集群。
++
+image:screenshot-k8s-confirm-remove-cluster.png["确认从工作空间中删除 Kubernetes 集群的页面的屏幕截图。"]
+
+
+
+Kubernetes 集群将从工作空间中删除，并且在 Canvas 上不再可见。

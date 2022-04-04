@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: /task/task-k8s-quick-start.html 
+keywords: kubernetes, persistent volumes, containers, persistent storage, kubeconfig, trident, kubernetes cluster, storage classes, classes, cvo-single, cvo-ha, thick provisioning, trident_trident, connect, disconnect, provision 
+summary: 将 Kubernetes 集群添加到 Cloud Manager 中，以便通过几个快速步骤进行高级数据管理。 
+---
+= 开始使用 Kubernetes 集群
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+将 Kubernetes 集群添加到 Cloud Manager 中，以便通过几个快速步骤进行高级数据管理。
+
+
+
+== 快速入门
+
+按照以下步骤快速入门。
+
+[role="quick-margin-para"]
+确保您的环境满足集群类型的前提条件。
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/occm/kubernetes-reqs-aws.html["AWS 中 Kubernetes 集群的要求"]
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/occm/kubernetes-reqs-aks.html["Azure 中 Kubernetes 集群的要求"]
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/occm/kubernetes-reqs-gke.html["Google Cloud 中的 Kubernetes 集群的要求"]
+
+[role="quick-margin-para"]
+您可以使用 Cloud Manager 添加 Kubernetes 集群并将其连接到工作环境。
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/occm/task-kubernetes-discover-aws.html["添加 Amazon Kubernetes 集群"]
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/occm/task-kubernetes-discover-azure.html["添加 Azure Kubernetes 集群"]
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/occm/task-kubernetes-discover-gke.html["添加 Google Cloud Kubernetes 集群"]
+
+[role="quick-margin-para"]
+使用原生 Kubernetes 接口和构造请求和管理永久性卷。Cloud Manager 可创建 NFS 和 iSCSI 存储类，您可以在配置永久性卷时使用这些存储类。
+
+[role="quick-margin-para"]
+link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-3-provision-your-first-volume["了解有关使用 Astra Trident 配置第一个卷的更多信息"^]。
+
+[role="quick-margin-para"]
+将 Kubernetes 集群添加到 Cloud Manager 后，您可以从 Cloud Manager 资源页面管理这些集群。
+
+[role="quick-margin-para"]
+link:task-k8s-manage-trident.html["了解如何管理 Kubernetes 集群。"]

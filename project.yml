@@ -19,6 +19,8 @@ sidebar:
     entries:
     - title: 了解 Kubernetes 数据管理
       url: "/concept-kubernetes.html"
+    - title: 快速入门
+      url: "/task-k8s-quick-start.html"
   - title: 要求
     entries:
     - title: AWS 上的 Kubernetes 集群
@@ -35,8 +37,19 @@ sidebar:
       url: "/task/task-kubernetes-discover-azure.html"
     - title: 在 Google Cloud 上添加集群
       url: "/task/task-kubernetes-discover-gke.html"
-  - title: 在 Kubernetes 集群上启用数据服务
-    url: "/task/task-kubernetes-enable-services.html"
+  - title: 管理 Kubernetes 集群
+    url: "/concept-manage-k8s.html"
+    entries:
+    - title: 安装 Astra Trident
+      url: "/task/task-k8s-manage-trident.html"
+    - title: 管理存储类
+      url: "/task/task-k8s-manage-storage-classes.html"
+    - title: 查看永久性卷
+      url: "/task/task-k8s-manage-persistent-volumes.html"
+    - title: 删除集群
+      url: "/task/task-k8s-manage-remove-cluster.html"
+    - title: 启用 NetApp 云数据服务
+      url: "/task/task-kubernetes-enable-services.html"
   - title: 知识和支持
     entries:
     - title: 注册以获得支持
@@ -53,6 +66,8 @@ homepage:
       url: "/whats-new.html"
     - title: 了解 Kubernetes 数据管理
       url: "/concept-kubernetes.html"
+    - title: 快速入门
+      url: "/task-k8s-quick-start.html"
   - title: 要求
     links:
     - title: AWS 上的 Kubernetes 集群
@@ -69,8 +84,16 @@ homepage:
       url: "/task/task-kubernetes-discover-azure.html"
     - title: 在 Google Cloud 上添加集群
       url: "/task/task-kubernetes-discover-gke.html"
-  - title: 启用数据服务
+  - title: 管理 Kubernetes 集群
     links:
+    - title: 安装 Astra Trident
+      url: "/task-k8s-manage-trident.html"
+    - title: 管理存储类
+      url: "/task-k8s-manage-storage-classes.html"
+    - title: 查看永久性卷
+      url: "/task-k8s-manage-persistent-volumes.html"
+    - title: 删除集群
+      url: "/task-k8s-manage-remove-cluster.html"
     - title: 启用数据服务
       url: "/task/task-kubernetes-enable-services.html"
   - title: 获取有关 Cloud Manager 的帮助

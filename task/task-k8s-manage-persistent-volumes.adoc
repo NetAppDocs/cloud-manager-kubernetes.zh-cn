@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: /task/task-k8s-manage-persistent-volumes.html 
+keywords: kubernetes, k8s, view persistent volume 
+summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 查看连接的永久性卷。 
+---
+= 查看永久性卷
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 查看永久性卷。
+
+.步骤
+. 双击 Canvas 上的 Kubernetes 工作环境或单击 * 进入工作环境 * 。
+. 从 * 概述 * 选项卡中单击 * 查看卷 * ，或者单击 * 持久性卷 * 选项卡。如果未配置永久性卷，请参见 link:https://docs.netapp.com/us-en/trident/trident-concepts/provisioning.html["配置"^] 有关在 Astra Trident 中配置卷的详细信息。
+
+
+此时将显示一个表，其中包含已配置的永久性卷。
+
+image:screenshot-k8s-volume-table.png["永久性卷表的屏幕截图。"]

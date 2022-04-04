@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-kubernetes.html 
 keywords: kubernetes, k8s, back up kubernetes, back up k8s, discover kubernetes cluster, discover k8s, amazon eks, eks, azure, aks, back up persistent volumes, persistent volumes, kubernetes support 
-summary: 将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。 
+summary: Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。 
 ---
-= Kubernetes 概述
+= Kubernetes 在 Cloud Manager 中进行数据管理
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,24 +13,38 @@ summary: 将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级�
 
 
 [role="lead"]
-将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。
+Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。 link:https://docs.netapp.com/us-en/trident/index.html["了解有关 Trident 的更多信息"^]。
 
 
 
 == 功能
 
-* 将集群添加到 Canvas 中，以便在混合云基础架构中查看和管理它们
-* 使用 Cloud Backup Service 备份永久性卷
-+
-image:screenshot-kubernetes-backup.png["Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。"]
+您可以使用 Cloud Manager 直接管理 Kubernetes 集群。
 
+* 安装 Astra Trident 。
+* 在混合云基础架构中添加和管理集群。
+* 添加和管理存储类并将其连接到工作环境。
+* 使用 Cloud Backup Service 备份永久性卷。
 
 
 
 
 == 支持的 Kubernetes 部署
 
-Cloud Manager 支持在 Amazon Elastic Kubernetes Service （ Amazon EKS ）和 Microsoft Azure Kubernetes Service （ AKS ）中运行的受管 Kubernetes 集群。
+Cloud Manager 支持在以下环境中运行的受管 Kubernetes 集群：
+
+* link:kubernetes-reqs-aws.html["Amazon Elastic Kubernetes Service （ Amazon EKS ）"]
+* link:kubernetes-reqs-aks.html["Microsoft Azure Kubernetes Service （ AKS ）"]
+* link:kubernetes-reqs-gke.html["Google Kubernetes Engine （ GKEE ）"]
+
+
+
+
+== 支持的 Astra Trident 部署
+
+需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["查看前提条件"^] 安装前。
+
+要升级 Astra Trident ， link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html["使用操作员升级"^]。
 
 
 

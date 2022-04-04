@@ -20,15 +20,10 @@
   <block id="d5f64dd836c164f17e32528a31fdeea5" category="inline-link-macro">了解有关 Kubernetes 支持的更多信息</block>
   <block id="541ec813f320b6a90ccb3d382d774f7e" category="paragraph"><block ref="b46c52759a0e98b71be9f6aed99e1b0c" category="inline-link-macro-rx"></block>。</block>
   <block id="5629dc3c8dacdcb31e6d3bf6d7586e32" category="admonition">现有 Kubernetes 服务（可通过 * K8* 选项卡访问）已弃用，并将在未来版本中删除。</block>
-  <block id="ccbd79a5bcab3e453f949ff4117b4275" category="summary">将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。</block>
-  <block id="4f64237bee72bb58ff4152fa48632885" category="doc">Kubernetes 概述</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
-  <block id="c5ec1386b558adcf3d52ae94e379e003" category="list-text">将集群添加到 Canvas 中，以便在混合云基础架构中查看和管理它们</block>
-  <block id="e93ee6ce2f667e494d48b99fc2c22728" category="list-text">使用 Cloud Backup Service 备份永久性卷</block>
   <block id="a0d9f3ae32f1b7df23e0071308b6cbe5" category="inline-image-macro">Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。</block>
   <block id="fdd5390b518e6b0ee63a9f6d25352e4d" category="paragraph"><block ref="fdd5390b518e6b0ee63a9f6d25352e4d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="acb13b8754d0f14e58090cb4826d589f" category="section-title">支持的 Kubernetes 部署</block>
-  <block id="6b7bfea0bd3da9dc242cb6bfd1641da6" category="paragraph">Cloud Manager 支持在 Amazon Elastic Kubernetes Service （ Amazon EKS ）和 Microsoft Azure Kubernetes Service （ AKS ）中运行的受管 Kubernetes 集群。</block>
   <block id="c9ece1f2227c56942142d90092ca7fd2" category="section-title">支持的后端存储</block>
   <block id="55a560dfd687efd2106430144cfa5892" category="paragraph">必须在每个 Kubernetes 集群上安装 NetApp 的 Astra Trident ，并且必须将 Cloud Volumes ONTAP 配置为集群的后端存储。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
@@ -39,8 +34,6 @@
   <block id="f56b205821b231a157cc0e3315bc72a6" category="paragraph">本主题使用 _Kubernetes cluster_ ，其中 EKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">要求</block>
   <block id="086e6c16e3fe8e13c336612ef636aa02" category="list-text">Astra Trident</block>
-  <block id="b6edb134a14ab126456a8cf8495987f9" category="inline-link">有关安装步骤，请转至 Astra Trident 文档</block>
-  <block id="f71e85a659608075f0509b9338ee77b6" category="list-text">Kubernetes 集群必须安装 NetApp Astra Trident 。需要使用四个最新版本的 Astra Trident 之一。<block ref="96de5dd22941483be2f5e4e573125fc9" category="inline-link-rx"></block>。</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
   <block id="f42c4f194d4364b14558c35f61d5d363" category="inline-link">有关配置步骤，请转至 Astra Trident 文档</block>
   <block id="acc4a07cbf9763718c5eb67fd34340d7" category="list-text">Cloud Volumes ONTAP for AWS 必须设置为集群的后端存储。<block ref="0ffa37c66c18870214970164d37847a6" category="inline-link-rx"></block>。</block>
@@ -67,7 +60,6 @@
   <block id="443963254a1729321efbfdbd4e2396c8" category="paragraph"><block ref="443963254a1729321efbfdbd4e2396c8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="59524cf8612a689e4d9ed61067454937" category="list-text">在 * 权限 * 选项卡中，展开策略并单击 * 编辑策略 * 。</block>
   <block id="4b1c304f38c097ba7776b76e4e099d42" category="inline-image-macro">AWS 控制台的屏幕截图，显示权限选项卡中的编辑策略按钮。</block>
-  <block id="845120e36ff1372b9be0014ef85d5ae6" category="paragraph"><block ref="845120e36ff1372b9be0014ef85d5ae6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f96de5b5f8572ecb3c2c80e8156181f8" category="list-text">单击 * 。 JSON* ，然后在第一组操作下添加以下权限：</block>
   <block id="e72ae7637ee4c3c3135530cf7abf3ea9" category="inline-link">查看策略的完整 JSON 格式</block>
   <block id="377d2375cdf41d8fe094ff8bcedcb12b" category="paragraph"><block ref="8eeee6ade5612bec522e249ee65dc7db" category="inline-link-rx"></block>。</block>
@@ -86,24 +78,13 @@
   <block id="b9940ca80ae2598fdb5c6c402f1f1dc1" category="section-title">设置 RBAC 授权</block>
   <block id="3af3ead39a5eec5783d926f19a9b6bfe" category="paragraph">您需要在每个 Kubernetes 集群上授权 Connector 角色，以便 Connector 可以发现和管理集群。</block>
   <block id="33ebb2dacbde969dd24700b6e4dbe435" category="list-text">创建集群角色和角色绑定。</block>
-  <block id="220a9a1f63ae55426c0a1d2072d313ac" category="list-text">创建包含以下文本的 YAML 文件。</block>
   <block id="26b09dacbaf5084bbe92bfa4d75feba8" category="list-text">将配置应用于集群。</block>
-  <block id="f08cfbb10dc9216a72c9d59da3c626b8" category="list-text">创建与权限组的标识映射。</block>
-  <block id="bcac99b7c9956d05f17a4e4f9649da71" category="open-title">使用 eksctl</block>
-  <block id="f7e12246f1ebd24c7f1a6460919e9bd3" category="paragraph">使用 eksctl 在集群与 Cloud Manager Connector 的 IAM 角色之间创建 IAM 身份映射。</block>
   <block id="836c1d30babd0339206570a66bcbb4f3" category="inline-link">有关完整说明，请参见 eksctl 文档</block>
   <block id="1e37bf365a6041e37e34936645ebc0a8" category="paragraph"><block ref="1119b51b5b352ff18c686869eb8e6d24" category="inline-link-rx"></block>。</block>
-  <block id="13225b5885ac45d1b5d3019c9de2e513" category="paragraph">下面提供了一个示例。</block>
-  <block id="a36cee8f656cd9e61ae5593885084071" category="open-title">编辑 AWS-auth</block>
-  <block id="de4e940a00cd2a48720f3f12fb53e9a7" category="paragraph">直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。</block>
-  <block id="434f77de052a92ee529d95ba80f3bab4" category="inline-link">有关完整说明，请参见 AWS EKS 文档</block>
-  <block id="05dcb2fa0de0a4549322d783d2f5e5fb" category="paragraph"><block ref="7af1dbb48bd59e8f995e1a97be9e70f8" category="inline-link-rx"></block>。</block>
   <block id="58abfb994a75b4140edc2a973ec9a3dc" category="summary">您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine 集群（ GKEE ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。</block>
   <block id="b6511d823d5fc5c8c219b52663e32c20" category="doc">Google Cloud 中的 Kubernetes 集群的要求</block>
   <block id="5c24db37dbf4e9b0061b549aeed26cc0" category="paragraph">您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine （ GKEE ）集群和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。</block>
   <block id="89acfe5365df26c5b2d9c418b9507492" category="paragraph">本主题使用 _Kubernetes cluster_ ，其中 GKE- 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。</block>
-  <block id="de99b3160528c7a2754f4c5dd4dbb80d" category="inline-link">有关使用 Helm 的安装步骤，请转至 Astra Trident 文档</block>
-  <block id="39b552ed633d800ed1446ff39c2a30b5" category="list-text">Kubernetes 集群必须已部署 NetApp Astra Trident 。使用 Helm 安装四个最新版本的 Astra Trident 之一。<block ref="fa49b53e52d430e79adf34c6f68f47be" category="inline-link-rx"></block>。</block>
   <block id="1e7fd0342ed668ad1096d1c03fb7af17" category="list-text">Cloud Volumes ONTAP 必须与 Kubernetes 集群位于同一租户帐户，工作空间和连接器下的 Cloud Manager 中。<block ref="0ffa37c66c18870214970164d37847a6" category="inline-link-rx"></block>。</block>
   <block id="529dbfeb8ae591bdc60b1e28dbcdacc6" category="list-text">必须使用所需权限在 Google 中运行 Connector 。 <block ref="666096be9a7c0cee4f03722fd9c8c93c" category="inline-xref-macro-rx"></block>。</block>
   <block id="6f9b9566eef8a735c30e29931c068a03" category="list-text">Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 GKE 集群上授权 Cloud Manager Connector 角色。 <block ref="ed89a5c7598981ce49ff49e89b6578d7" category="inline-xref-macro-rx"></block>。</block>
@@ -129,7 +110,6 @@
   <block id="837b8b5111e480b693f744fec1804ccb" category="list-text">在上的服务帐户详细信息中 <block ref="90b0dbeec03910bdea419bc944660763" category="inline-link-macro-rx"></block>。</block>
   <block id="4bf9575451981aabdb909c6a57da72cf" category="inline-image-macro">Cloud Console 中服务帐户详细信息的屏幕截图。</block>
   <block id="ae62d39210641a9fb9c2dd38c13a2b07" category="paragraph"><block ref="ae62d39210641a9fb9c2dd38c13a2b07" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ad4cf17755a22769adfcbfac8d05ece2" category="list-text">创建包含以下文本的 YAML 文件。将 ``ssubforjects ： kind ：`` 变量替换为您的用户名，将 ``ssubforjects ： user ：`` 替换为授权服务帐户的唯一 ID 。</block>
   <block id="59926e95a1273af1eff3f3a8847d1286" category="summary">您可以使用 Cloud Manager 在 Azure 中添加和管理受管 Azure Kubernetes 集群（ AKS ）和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。</block>
   <block id="c5be663296cc453aa3076c0cfcedc102" category="doc">Azure 中 Kubernetes 集群的要求</block>
   <block id="39e746094f61257868fbdee54e708de3" category="paragraph">本主题使用 _Kubernetes cluster_ ，其中对于 AKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。</block>
@@ -163,7 +143,6 @@
   <block id="787c8e09d4ba5342ce8f84b1af78b048" category="inline-image-macro">Azure 管理门户上系统分配的对象 ID 窗口的屏幕截图。</block>
   <block id="0c90ae4dc73f81dbbd0a6e0299f5deb5" category="paragraph"><block ref="0c90ae4dc73f81dbbd0a6e0299f5deb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4ebffaff3187e96f25bb8b4b25978bda" category="list-text">如果要部署 * 自管理 Kubernetes 集群 * ，则需要任何授权用户的用户名。</block>
-  <block id="333544b2aeb49831884a7faafb490e35" category="list-text">创建包含以下文本的 YAML 文件。将 ``ssubjects ： kind ：`` 变量替换为您的用户名，将 ``ssubjects ： user ：`` 替换为系统分配的受管身份的对象 ID 或上述任何授权用户的用户名。</block>
   <block id="e59cbc41f2797427c91406bb0b03401e" category="summary">将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。</block>
   <block id="d9348d075dc7b3c91cff99d56dfc327b" category="doc">Kubernetes 文档</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
@@ -206,14 +185,10 @@
   <block id="b695b2f49a50c3d925dc789182bc1070" category="list-text">上传 YAML 格式的 Kubernetes 配置文件。</block>
   <block id="6e53f86d2931b115352479b77b41a90e" category="inline-image-macro">导入 Kubernetes 集群页面的屏幕截图，其中包含配置文件和可用集群表。</block>
   <block id="c0051c23ce1a6dfb0a01449b18d415ad" category="paragraph"><block ref="c0051c23ce1a6dfb0a01449b18d415ad" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="546b680809febc3022d8385dde42cd09" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetApp 的云数据服务进行高级数据管理。</block>
-  <block id="e8cae55afec935b901fe515559f5c672" category="doc">将 NetApp 的云数据服务与 Kubernetes 集群结合使用</block>
   <block id="88115501de56483f3bf8dd5514ce1d84" category="paragraph">目前， Kubernetes 集群支持 Cloud Backup 。您可以使用 Cloud Backup 将永久性卷备份到对象存储。</block>
   <block id="963408f4aa8e949d60c3b0befc33267d" category="inline-link">转到 Cloud Backup 文档，了解如何备份永久性卷</block>
-  <block id="e77b635529c315242274245769062742" category="paragraph"><block ref="0cf41425f985f21dcce976508ef1a8db" category="inline-link-rx"></block>。</block>
   <block id="a55035d13d56568118050b48f14c492f" category="summary">将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到 Cloud Manager 中，以便开始将永久性卷备份到 Amazon S3 。</block>
   <block id="293e3749aa00f6ba4c48a0f2d8f93ba2" category="doc">将 Amazon Kubernetes 集群添加到 Cloud Manager</block>
-  <block id="52d46a61443272c06b413508e1c79b15" category="paragraph">您可以发现 Kubernetes clusers 或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Amazon S3 。</block>
   <block id="29508a151c67e3d0dd86c039a47344fd" category="list-text">选择 * Amazon Web Services* &gt; * Kubernetes Cluster* ，然后单击 * 下一步 * 。</block>
   <block id="d59c3e6f1bd8ff190720d2953c94c804" category="inline-image-macro">"Discover a Kubernetes Cluster" 页面的屏幕截图，其中显示了选定的 AWS 区域和 Kubernetes 集群。</block>
   <block id="f8c9a10cf098481ef28aa7f25a7229aa" category="paragraph"><block ref="f8c9a10cf098481ef28aa7f25a7229aa" category="inline-image-macro-rx" type="image"></block></block>
@@ -245,7 +220,6 @@
   <block id="6e65026446a3f3b3ebb5471fa617ce29" category="sidebar">在 AWS 上添加集群</block>
   <block id="2d1f9ee77fc479dfb743551a0245845f" category="sidebar">在 Azure 上添加集群</block>
   <block id="ba9410f15dd19e0a92f5f4c2291636d6" category="sidebar">在 Google Cloud 上添加集群</block>
-  <block id="68cac9b88f3148d5dfe0e976ab311e4f" category="sidebar">在 Kubernetes 集群上启用数据服务</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="41e3782291be693bb1f948094d98229d" category="sidebar">启用数据服务</block>
@@ -254,11 +228,170 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
-  <block id="a6a798b867f9fc8417745a183efd7eb6" category="list-text"><block ref="022a32848e9a635fb610022260eb258d" category="inline-link-rx"></block> 建议</block>
-  <block id="8d55e3e5808e7e03da07d756385c832d" category="list-text"><block ref="8d55e3e5808e7e03da07d756385c832d" category="inline-link-rx"></block></block>
-  <block id="6014ba23e9fc5f2c6887737ea05510d8" category="list-text"><block ref="6b9aa097c47f43d8df1053195d75d9bf" category="inline-link-rx"></block> 建议</block>
-  <block id="d411eaec4bb582e5916583ac64fcdf30" category="list-text"><block ref="d411eaec4bb582e5916583ac64fcdf30" category="inline-link-rx"></block></block>
-  <block id="e21cac46a7c03ad31fa2e72981de80dc" category="list-text"><block ref="4f38115e376c78857e2927695cec2c43" category="inline-link-rx"></block> 建议</block>
-  <block id="df9caceb718925bf1c4a4541fb09798b" category="list-text"><block ref="df9caceb718925bf1c4a4541fb09798b" category="inline-link-rx"></block></block>
-  <block id="81d769953d03a391b5322bf4f84f2aff" category="list-text"><block ref="81d769953d03a391b5322bf4f84f2aff" category="inline-link-rx"></block></block>
+  <block id="32fc9c6f3a293194ff9fde5db876cbb6" category="section-title">2022 年 4 月 4 日</block>
+  <block id="ecee73066145d2e6f1b75b79d2af7514" category="section-title">使用 Cloud Manager 资源页面管理 Kubernetes 集群</block>
+  <block id="26d6d7c2307bf3cf565d0e8283db031d" category="list-text">现在， Kubernetes 集群管理已增强了直接与集群工作环境的集成。现在，您可以从集群资源页面执行以下操作。</block>
+  <block id="f1fe71442cd08e74d342114df7ee1551" category="inline-link-macro">安装 Astra Trident</block>
+  <block id="b4940c8b54941154dff3675bb279c96f" category="list-text"><block ref="b4940c8b54941154dff3675bb279c96f" category="inline-link-macro-rx"></block></block>
+  <block id="fd0987c679e587c89c7d5551c641f09e" category="inline-link-macro">添加存储类</block>
+  <block id="be2f7669a1d3d4dec877a85297de18ec" category="list-text"><block ref="be2f7669a1d3d4dec877a85297de18ec" category="inline-link-macro-rx"></block></block>
+  <block id="260adbf21b473e18ea0788235c9512b8" category="inline-link-macro">查看永久性卷</block>
+  <block id="6a38c17b4adfb6fade3691d6bab9976a" category="list-text"><block ref="6a38c17b4adfb6fade3691d6bab9976a" category="inline-link-macro-rx"></block></block>
+  <block id="f253fdd547a6f5e0e05bbdb671ae8b24" category="inline-link-macro">删除集群</block>
+  <block id="aa7542e939f8e623254af69a1fcd8e2b" category="list-text"><block ref="aa7542e939f8e623254af69a1fcd8e2b" category="inline-link-macro-rx"></block></block>
+  <block id="6d6f9b61b474cb16598eda49f24d6452" category="list-text"><block ref="6d6f9b61b474cb16598eda49f24d6452" category="inline-link-macro-rx"></block></block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="inline-link-macro">快速入门</block>
+  <block id="2caed3e1483d538b0b868d278bd53949" category="list-text">新的 <block ref="a7ce12c998c9439767584776d325ea5b" category="inline-link-macro-rx"></block> 让您快速启动和运行。</block>
+  <block id="4e6d8a21fe823b1687cc8c006854102e" category="paragraph">您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中，以便将永久性卷备份到 Amazon S3 。</block>
+  <block id="56a8cd5372dfc93abbb885fc864189bf" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 确认兼容的 Astra Trident 安装或安装 Astra Trident 。需要使用四个最新版本的 Astra Trident 之一。</block>
+  <block id="14d9b10c6196045941347a9e85704b50" category="inline-link-macro">Astra Trident 文档</block>
+  <block id="8600dce42208e643e9f3e0a996c90220" category="paragraph">要了解有关 Astra Trident 的更多信息，请参见 <block ref="2b8a155fc083396b96b18cee0ba5eab0" category="inline-link-macro-rx"></block>。</block>
+  <block id="703b6be9eec96bb49a157de2a1ae70ae" category="admonition">如果未安装 Astra Trident ，或者安装了不兼容版本的 Astra Trident ，则集群将显示需要执行操作。</block>
+  <block id="1130de8b9b833485eff2e257fb69bfc6" category="list-text">双击 Canvas 上的 Kubernetes 工作环境或单击 * 进入工作环境 * 。</block>
+  <block id="6867d56501a1639e8de0328e96a5d354" category="list-text">如果未安装 Astra Trident ，请单击 * 安装 Trident * 。</block>
+  <block id="7c729d1891ae54bb841ac8551a0cc665" category="inline-image-macro">K8s 资源页面的屏幕截图，显示未安装 Astra Trident 以及用于安装 Astra Trident 的按钮。</block>
+  <block id="fca8d7d1d460e9d7e376d9a8c0436a56" category="paragraph"><block ref="fca8d7d1d460e9d7e376d9a8c0436a56" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="607bff952f97786985d5316831fa1fa1" category="inline-link">有关升级步骤，请转至 Astra Trident 文档</block>
+  <block id="964778d2cea436fcbfab23500ba508d3" category="list-text">如果安装了 Astra Trident 的后端版本，<block ref="7750d0e2469b3c9ff5677b5c3166bd8d" category="inline-link-rx"></block>。</block>
+  <block id="b856d54eb2c982baae9beda550a3c6e4" category="inline-image-macro">Astra Trident 升级过程的屏幕截图。</block>
+  <block id="fd007b3e14f8b08692b19f1bf6b9ae5b" category="paragraph"><block ref="fd007b3e14f8b08692b19f1bf6b9ae5b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5af4fd067fdcfc2366829de01d0a1fe4" category="paragraph">安装了最新版本的 Astra Trident 。现在，您可以添加存储类。</block>
+  <block id="dcfed683336073a1cbf61c7b6871cc34" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 从工作空间中删除集群。</block>
+  <block id="f9a4b06baa6b1477afa377706cef0f0f" category="doc">从工作空间中删除 Kubernetes 集群</block>
+  <block id="f33a40ad5d2017c9e1b0e7abd7a5a643" category="list-text">双击 Canvas 上的 Kubernetes 工作环境或单击 * 进入工作环境 * 。</block>
+  <block id="c3779df0736ecbd3346b30067bbc3d57" category="list-text">在页面右上角，选择操作菜单，然后单击 * 从工作空间中删除 * 。</block>
+  <block id="cc684c4b8845d4e51e87b6bf727c1d76" category="inline-image-macro">屏幕截图显示了用于从工作空间中删除 Kubernetes 集群的菜单。</block>
+  <block id="4d742ed466433397d47332397dc4d3c4" category="paragraph"><block ref="4d742ed466433397d47332397dc4d3c4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ffbd99556cf50096753bfbd7a907b09c" category="list-text">单击 * 删除 * 确认从工作空间中删除集群。您可以随时重新发现此集群。</block>
+  <block id="bcec5055290dea9702824b44b3ed2bff" category="inline-image-macro">确认从工作空间中删除 Kubernetes 集群的页面的屏幕截图。</block>
+  <block id="86a5f92314f48ea7dfb3565a2752a76d" category="paragraph"><block ref="86a5f92314f48ea7dfb3565a2752a76d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6063d5ed0fa76ced94f0f7adbbd7b833" category="paragraph">Kubernetes 集群将从工作空间中删除，并且在 Canvas 上不再可见。</block>
+  <block id="63c24f9994279591340cd89dcb19f3cd" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 管理存储类。</block>
+  <block id="e8b9c3a9859a62e9a58431c3b61f75d5" category="doc">管理存储类</block>
+  <block id="76a5809985aa691391b31d5f20c17a42" category="admonition">如果未定义存储类，则集群将显示需要执行操作。</block>
+  <block id="8e79c25356bb563e28e9ae0a108b960b" category="list-text">确认已安装 Astra Trident 的四个最新版本之一。</block>
+  <block id="af1dab031c2b915817ef7d5169fdfcfb" category="list-text">单击 * 添加存储类 * 为 Kubernetes 集群定义存储类。</block>
+  <block id="790a7b05e43ed5454554eef9671154f0" category="inline-image-macro">显示添加存储类按钮的 K8s 资源页面的屏幕截图。</block>
+  <block id="bac110b30291a86e52ffa944c5ba6bb5" category="paragraph"><block ref="bac110b30291a86e52ffa944c5ba6bb5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6a8b915c7d54f345c01102c31e00f7e1" category="list-text">提供存储类的名称，选择定义选项，然后单击 * 下一步 * 。</block>
+  <block id="26e844784a066d14af9464e1c0366829" category="inline-image-macro">显示 K8s 存储类定义选项的屏幕截图。</block>
+  <block id="2204d229f6006a328688918431aab2cf" category="paragraph"><block ref="2204d229f6006a328688918431aab2cf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="46213c151b950647dd4e20d3c0e13222" category="list-text">选择要连接到集群的工作环境。单击 * 添加 * 。</block>
+  <block id="e0c9fa0852fea63dc1167ab3f2b85fb4" category="inline-image-macro">显示为 Kubernetes 集群选择工作环境的屏幕截图。</block>
+  <block id="f99a712980063704c4a584a6683234a2" category="paragraph"><block ref="f99a712980063704c4a584a6683234a2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6f78048f5e23feba1c2dfeeb70958d2b" category="paragraph">您可以从 Kubernetes 集群的资源页面中单击以查看存储类。</block>
+  <block id="24d4e555e1f7b6ed662909980cd4b88c" category="inline-image-macro">显示 Kubernetes 资源页面中 " 查看存储类 " 的屏幕截图。</block>
+  <block id="a770b061844a8f658a79e0452983186e" category="paragraph"><block ref="a770b061844a8f658a79e0452983186e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a51c9219854a3d214e31f819a1e7632e" category="section-title">查看工作环境详细信息</block>
+  <block id="fed6f504a568def380a16e81e4509c4b" category="list-text">单击 * 存储类 * 选项卡。</block>
+  <block id="c05b19af7187edbea768275aa1835d7e" category="list-text">单击信息图标可查看工作环境的详细信息。</block>
+  <block id="093397c8ba222a56a6cafe0046ed32df" category="paragraph">此时将打开工作环境详细信息面板。</block>
+  <block id="88d7886b91f2558662854777a9258628" category="inline-image-macro">Kubernetes 集群工作环境详细信息的屏幕截图。</block>
+  <block id="30839295878a455d18f2b8a0dce98721" category="paragraph"><block ref="30839295878a455d18f2b8a0dce98721" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6cb5ec91420685bca856d5c3c506a3f0" category="section-title">设置默认存储类</block>
+  <block id="e06675debd77236832cd1bc55da29490" category="list-text">单击存储类的操作菜单，然后单击 * 设置为默认值 * 。</block>
+  <block id="60994baeb2a6bcfbd041df549466a420" category="inline-image-macro">设置默认存储类的操作菜单的屏幕截图。</block>
+  <block id="fa49b244e60624d651baf60664e565b3" category="paragraph"><block ref="fa49b244e60624d651baf60664e565b3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f1d758a802b437c14987d63e77a61a9e" category="paragraph">选定存储类设置为默认值。</block>
+  <block id="248ead8f8ebff7c3211d2c918694e817" category="inline-image-macro">显示默认存储类的屏幕截图。</block>
+  <block id="101961998c35d35cc5ab5fd53eb57c57" category="paragraph"><block ref="101961998c35d35cc5ab5fd53eb57c57" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="90c935e9359ed5f4172e2bfbf031b209" category="section-title">删除存储类</block>
+  <block id="e2fee88009bdc68bb3ccdcdbef57c310" category="inline-image-macro">用于删除存储类的操作菜单的屏幕截图。</block>
+  <block id="04ed0f4f9893c8d492f8a5ac74b5a400" category="paragraph"><block ref="04ed0f4f9893c8d492f8a5ac74b5a400" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="78b12c7f2018d4a6b9b2d3ab0aa23fab" category="list-text">单击 * 删除 * 确认删除存储类。</block>
+  <block id="14d57c72376f75349d67da3b67721b52" category="inline-image-macro">用于删除存储类的确认屏幕的屏幕截图。</block>
+  <block id="0dd89c6b1e51baa8486c2bb0e6b80b54" category="paragraph"><block ref="0dd89c6b1e51baa8486c2bb0e6b80b54" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="afd76a0ed7f0f829a9fddbc272ab6299" category="paragraph">此时将删除选定存储类。</block>
+  <block id="c51edbd9644671669f8a6fc9bdfe66fe" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetApp 云数据服务进行高级数据管理。</block>
+  <block id="7c3dba5dcfefe7c148fb75a35249f81c" category="doc">将 NetApp 云数据服务与 Kubernetes 集群结合使用</block>
+  <block id="159a2c61a2d800a03c28121597f3f775" category="paragraph"><block ref="c231e29babf1a493836bb058a52173d8" category="inline-link-macro-rx"></block>。</block>
+  <block id="09bb0b2da16893a3eff055a9d40e2794" category="summary">将 Kubernetes 集群添加到 Cloud Manager 中，以便通过几个快速步骤进行高级数据管理。</block>
+  <block id="79e470c48afbbe1fa9e042e6403d2459" category="doc">开始使用 Kubernetes 集群</block>
+  <block id="6c5ac2a580024aab98e753e5c4dc264c" category="paragraph">按照以下步骤快速入门。</block>
+  <block id="2fadcb7c66778a6e996282a9d85d69d3" category="paragraph">确保您的环境满足集群类型的前提条件。</block>
+  <block id="91371b061c7d73513ec2d8334d74507a" category="paragraph"><block ref="91371b061c7d73513ec2d8334d74507a" category="inline-link-macro-rx"></block></block>
+  <block id="8ef69472e0bf92730a0f3921c882ccd5" category="paragraph"><block ref="8ef69472e0bf92730a0f3921c882ccd5" category="inline-link-macro-rx"></block></block>
+  <block id="30cbb99c1fb544a739a33f3089a4207a" category="paragraph"><block ref="30cbb99c1fb544a739a33f3089a4207a" category="inline-link-macro-rx"></block></block>
+  <block id="822d28ac02a6b0c333bf3eabab847e14" category="paragraph">您可以使用 Cloud Manager 添加 Kubernetes 集群并将其连接到工作环境。</block>
+  <block id="29eef78ab52bc074b0642baafaa44a77" category="inline-link-macro">添加 Amazon Kubernetes 集群</block>
+  <block id="58edfe2caca070b44396387dc8c34d0d" category="paragraph"><block ref="58edfe2caca070b44396387dc8c34d0d" category="inline-link-macro-rx"></block></block>
+  <block id="8cae45546ea6e7035e9b798f709fc911" category="inline-link-macro">添加 Azure Kubernetes 集群</block>
+  <block id="e9c72c951b20431e1caafe9920ac0b62" category="paragraph"><block ref="e9c72c951b20431e1caafe9920ac0b62" category="inline-link-macro-rx"></block></block>
+  <block id="2872769900c1ca485d1628b4eefde308" category="inline-link-macro">添加 Google Cloud Kubernetes 集群</block>
+  <block id="ec22f19404cd18f489ae10e70492134a" category="paragraph"><block ref="ec22f19404cd18f489ae10e70492134a" category="inline-link-macro-rx"></block></block>
+  <block id="c5ea1d5f2f35adec1d872ec686a8c040" category="paragraph">使用原生 Kubernetes 接口和构造请求和管理永久性卷。Cloud Manager 可创建 NFS 和 iSCSI 存储类，您可以在配置永久性卷时使用这些存储类。</block>
+  <block id="fc0f20615e6c250961a9e88b2929444b" category="inline-link-macro">了解有关使用 Astra Trident 配置第一个卷的更多信息</block>
+  <block id="28eb70a7fd7de45b7957d03e5f3d4554" category="paragraph"><block ref="439da74acd283499ba63209cd4e1e52e" category="inline-link-macro-rx"></block>。</block>
+  <block id="30b6dbd7820394673df20d4ca1a96433" category="paragraph">将 Kubernetes 集群添加到 Cloud Manager 后，您可以从 Cloud Manager 资源页面管理这些集群。</block>
+  <block id="f500d0f02d11fd7c61fe2f5da39074f0" category="inline-link-macro">了解如何管理 Kubernetes 集群。</block>
+  <block id="35cbaff5433d00a9b082ae5c280b5e9e" category="paragraph"><block ref="35cbaff5433d00a9b082ae5c280b5e9e" category="inline-link-macro-rx"></block></block>
+  <block id="b0c3c99bdd45282a0907b14337e167d0" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 查看连接的永久性卷。</block>
+  <block id="ca264d2d0523bcea1c8aa70735414da1" category="paragraph">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 查看永久性卷。</block>
+  <block id="89c3bcf0ecc1114f8d19734d9156cb40" category="inline-link-macro">配置</block>
+  <block id="fcba6012c777a16b10bc3866ceb75c1c" category="list-text">从 * 概述 * 选项卡中单击 * 查看卷 * ，或者单击 * 持久性卷 * 选项卡。如果未配置永久性卷，请参见 <block ref="8ea547c8e5046e3bbfaab0e05145f9ac" category="inline-link-macro-rx"></block> 有关在 Astra Trident 中配置卷的详细信息。</block>
+  <block id="3a84970eaeee39d237d01aa9a3807a56" category="paragraph">此时将显示一个表，其中包含已配置的永久性卷。</block>
+  <block id="9d7f06e389e97b5210ff3327f767fb7e" category="inline-image-macro">永久性卷表的屏幕截图。</block>
+  <block id="592eeadfba828d69880933e6db8c3887" category="paragraph"><block ref="592eeadfba828d69880933e6db8c3887" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fbb4c4e41bf29d56afd94a8150a4fc4d" category="summary">Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。</block>
+  <block id="f3edad7dd39ccdb42ecbbd25ce696ef7" category="doc">Kubernetes 在 Cloud Manager 中进行数据管理</block>
+  <block id="d202d8021b40bfbe11235a5a65c0fe8c" category="inline-link-macro">了解有关 Trident 的更多信息</block>
+  <block id="4f63c1d4acd536bd5b9a9745d3f20e7b" category="paragraph">Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。 <block ref="dd2206fc656d0a859de4039d89433dfe" category="inline-link-macro-rx"></block>。</block>
+  <block id="ce13beab50b67927b1103252e965db42" category="paragraph">您可以使用 Cloud Manager 直接管理 Kubernetes 集群。</block>
+  <block id="9e2a7f44aa27cc7ead915762de91e605" category="list-text">安装 Astra Trident 。</block>
+  <block id="3e1566822574596f61c1fe009087856e" category="list-text">在混合云基础架构中添加和管理集群。</block>
+  <block id="aa6e96555ed26ef1dcb622e5b13653ae" category="list-text">添加和管理存储类并将其连接到工作环境。</block>
+  <block id="d59a7b1b3d81013cb6befe124b4da534" category="list-text">使用 Cloud Backup Service 备份永久性卷。</block>
+  <block id="d309ea6b2fbd918f1d33db3b349ce70e" category="paragraph">Cloud Manager 支持在以下环境中运行的受管 Kubernetes 集群：</block>
+  <block id="46a72d9af542e3e84ec5f5f3a72f54c1" category="inline-link-macro">Amazon Elastic Kubernetes Service （ Amazon EKS ）</block>
+  <block id="7686fcee34a9e771a02c0b8615f7751b" category="list-text"><block ref="7686fcee34a9e771a02c0b8615f7751b" category="inline-link-macro-rx"></block></block>
+  <block id="f3bd1985b243e9691bbbd63c6702344b" category="inline-link-macro">Microsoft Azure Kubernetes Service （ AKS ）</block>
+  <block id="dcb1c5115f00a4ce733e979d31754406" category="list-text"><block ref="dcb1c5115f00a4ce733e979d31754406" category="inline-link-macro-rx"></block></block>
+  <block id="974030a30a48754684d05541fd5e96c9" category="inline-link-macro">Google Kubernetes Engine （ GKEE ）</block>
+  <block id="b987f0a825761c9e56972aa39ef676f8" category="list-text"><block ref="b987f0a825761c9e56972aa39ef676f8" category="inline-link-macro-rx"></block></block>
+  <block id="213acaa88814071409958acdc9192518" category="section-title">支持的 Astra Trident 部署</block>
+  <block id="22d8ff517038ce2f90897c500f9ea50f" category="inline-link-macro">查看前提条件</block>
+  <block id="e244dca7cd711ef2b227bcd422cd641e" category="paragraph">需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 <block ref="8da0f2411c72d1a5ebe475af99243801" category="inline-link-macro-rx"></block> 安装前。</block>
+  <block id="74347238ab27b50c48fd1aa9e68844e4" category="inline-link-macro">使用操作员升级</block>
+  <block id="7c0e36f1a9c7af2d74760d191974b0e0" category="paragraph">要升级 Astra Trident ， <block ref="67d80849aeaf50fe569386f344ed4725" category="inline-link-macro-rx"></block>。</block>
+  <block id="c4541926fe853a3614406482ac212fff" category="list-text">需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 <block ref="8da0f2411c72d1a5ebe475af99243801" category="inline-link-macro-rx"></block> 安装 Astra Trident 之前</block>
+  <block id="f404e9d0235ae9dbfd304a568ea59510" category="list-text"><block ref="03eaf10395ef9e3efad62cf1e4438d2a" category="inline-link-macro-rx"></block> 建议</block>
+  <block id="446e449228d00ad435a264295f1e0158" category="list-text"><block ref="446e449228d00ad435a264295f1e0158" category="inline-link-macro-rx"></block></block>
+  <block id="6b3760e9ce2bfd92685feda2753e312f" category="list-text">备份和还原</block>
+  <block id="2dcb994cc66baaaa5ac5f51a666cc470" category="list-text">备份和还原只需要基本授权。</block>
+  <block id="589cddcfb97ddd817654b8448e583560" category="list-text">要使用 Cloud Manager 添加存储类，需要扩展授权。</block>
+  <block id="e38848cde65bc177038607eba51773c3" category="list-text">安装 Astra Trident</block>
+  <block id="0cc29c3016f8edd45e66cfd491cc35e4" category="list-text">要安装 Astra Trident ，您需要为 Cloud Manager 提供完全授权。</block>
+  <block id="6ddcbf7c123160275093489b09f57178" category="admonition">安装 Astra Trident 时， Cloud Manager 会安装 Astra Trident 后端和 Kubernetes 密钥，其中包含 Astra Trident 与存储集群通信所需的凭据。</block>
+  <block id="a392c9c3d2df2d0a5afaed519cd01879" category="list-text">根据您的授权要求创建包含以下文本的 YAML 文件。将 ``ssubforjects ： kind ：`` 变量替换为您的用户名，将 ``ssubforjects ： user ：`` 替换为授权服务帐户的唯一 ID 。</block>
+  <block id="515f76789d2dca7dac91e44bba61e4f7" category="open-title">备份 / 还原</block>
+  <block id="0653aaf657fc7447bc8ef9afc51f9214" category="paragraph">添加基本授权，以便为 Kubernetes 集群启用备份和还原。</block>
+  <block id="7672a092783c4348b96b40ea2dcf6681" category="open-title">存储类</block>
+  <block id="a296388d715a55c1152745b7367fc0c5" category="paragraph">添加扩展授权以使用 Cloud Manager 添加存储类。</block>
+  <block id="b8b9eab8c1ed7b79387652490f5724ec" category="open-title">安装 Trident</block>
+  <block id="47b31bee79140af784a118e6eb34fdbd" category="paragraph">使用命令行提供完全授权并启用 Cloud Manager 以安装 Astra Trident 。</block>
+  <block id="74ac826b742735257c4c43faffe62b41" category="list-text">需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 <block ref="8da0f2411c72d1a5ebe475af99243801" category="inline-link-macro-rx"></block> 安装 Astra Trident 之前。</block>
+  <block id="f89e07a755c721ce8e7e3c8eed5f0f13" category="list-text"><block ref="e4079d926604a2f5b999934a2d4f26d7" category="inline-link-macro-rx"></block> 建议</block>
+  <block id="f994827af963c9b45fb8cbbe74adc22c" category="list-text"><block ref="f994827af963c9b45fb8cbbe74adc22c" category="inline-link-macro-rx"></block></block>
+  <block id="05a0030833e70e4af624c3716f988104" category="list-text">根据您的授权要求创建包含以下文本的 YAML 文件。将 ``ssubjects ： kind ：`` 变量替换为您的用户名，将 ``ssubjects ： user ：`` 替换为系统分配的受管身份的对象 ID 或上述任何授权用户的用户名。</block>
+  <block id="d8504168dbe366f1ffe49a77a72eacda" category="list-text"><block ref="c55a72352b8cc03452bbfc87fde8900e" category="inline-link-macro-rx"></block> 建议</block>
+  <block id="8b279013423512c41be32334a5cc81ec" category="list-text"><block ref="8b279013423512c41be32334a5cc81ec" category="inline-link-macro-rx"></block></block>
+  <block id="9f5e2bf1b2647c62e7ea24017cc08df2" category="list-text"><block ref="9f5e2bf1b2647c62e7ea24017cc08df2" category="inline-link-macro-rx"></block></block>
+  <block id="c933a937af3266562155099a4ad44e14" category="paragraph"><block ref="c933a937af3266562155099a4ad44e14" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d1c51ee4ad82e26c7069e126c0a5d25d" category="paragraph">要启用不同的功能，需要不同的授权。</block>
+  <block id="12fb6938fb90a471014c2abce44ca15b" category="list-text">根据您的授权要求创建包含以下文本的 YAML 文件。</block>
+  <block id="e4e88e99e021b78e80ca0c688485ea20" category="list-text">使用 `eksctl` 创建与权限组的标识映射。下面提供了一个示例。</block>
+  <block id="fe56eccd77db48009fae1416eb34f4bd" category="summary">您可以使用 Cloud Manager 安装 Astra Trident ，配置存储类，删除集群以及启用数据服务。</block>
+  <block id="384b71db954a7a463c759208283e47c4" category="doc">管理 Kubernetes 集群</block>
+  <block id="7e60eeaefc6a3c5fb637acd03070a64a" category="paragraph">将 Kubernetes 集群添加到 Cloud Manager 后，您可以从资源页面管理这些集群。要打开资源页面，请双击 Canvas 上的 Kubernetes 工作环境。</block>
+  <block id="a55c9ab275da7d6af3d043922cbe9db6" category="inline-image-macro">显示集群详细信息的 Kubernetes 资源页面的屏幕截图。</block>
+  <block id="6e7cef0ef9634162a88caaa29c694893" category="paragraph"><block ref="6e7cef0ef9634162a88caaa29c694893" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0a7f3527cff1099d537e438e6d62de3f" category="paragraph">在资源页面中，您可以：</block>
+  <block id="ae98d4fcb6e8e5720784f6c4936d3fda" category="list-text">查看 Kubernetes 集群状态。</block>
+  <block id="4c1d1c29dc032acaba6d87523245901a" category="list-text">确认已安装 Astra Trident 。请参见 <block ref="345832d3138c1eb0f6633c370a7f6028" category="inline-link-macro-rx"></block>。</block>
+  <block id="1144aea980959108cfaf2514fbf4950d" category="list-text">添加和删除存储类。请参见 <block ref="9e82adf493a42c7e6eea0f3ece5f1523" category="inline-link-macro-rx"></block>。</block>
+  <block id="148ab235d087e61e2b2f7fd1f1c69a5f" category="list-text">查看永久性卷。请参见 <block ref="cd4689f963d360c6dbfc83d0ed5ebd22" category="inline-link-macro-rx"></block>。</block>
+  <block id="001f7c78e2e0007ed1165a22b8a857c7" category="list-text">从工作空间中删除 Kubernetes 集群。请参见 <block ref="2345a967fe9f27d7be623e42d7d8b4c4" category="inline-link-macro-rx"></block>。</block>
+  <block id="c83be9d30dd0d8b55fb8bdbf6f11eb85" category="inline-link-macro">使用 NetApp 云数据服务</block>
+  <block id="5988e88f080603d109047fd28346431d" category="list-text">激活或查看 Cloud Backup 。请参见 <block ref="970aaadca61cb9a29c8e2b76716ffafe" category="inline-link-macro-rx"></block>。</block>
+  <block id="33729732e4c013e81e5576920fedbc76" category="sidebar">启用 NetApp 云数据服务</block>
 </blocks>
