@@ -45,11 +45,13 @@
   <link rel="stylesheet" href='/zh-cn/cloud-manager-kubernetes/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/zh-cn/cloud-manager-kubernetes/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/custom-dropdown.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/na-pagenav.css' type='text/css'>
 
   
   <link rel="stylesheet" href="/zh-cn/cloud-manager-kubernetes/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/cloud-manager-kubernetes/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
   <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
@@ -131,7 +133,7 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
-  <script src='/zh-cn/cloud-manager-kubernetes/js/version-dropdown.js'></script>
+  <script src='/zh-cn/cloud-manager-kubernetes/js/custom-dropdown.js'></script>
   <script src='/zh-cn/cloud-manager-kubernetes/js/FileSaver.min.js'></script>
   <script src='/zh-cn/cloud-manager-kubernetes/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/cloud-manager-kubernetes/js/jszip.min.js'></script>
@@ -139,7 +141,7 @@
 </head>
 
 
-  <body class role="document">
+  <body class role="document" data-flavor="">
     <div id="page" class="n-off-canvas-menu">
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
@@ -296,6 +298,9 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
         <a target="_blank" href="/zh-cn/cloud-manager-kubernetes/pdfs/fullsite-sidebar/Kubernetes_文档.pdf" >
           <img src="/zh-cn/cloud-manager-kubernetes/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
 
@@ -308,6 +313,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/入门.pdf" 
@@ -317,6 +325,8 @@
             入门
           </a>
           
+
+
 
 
 
@@ -332,6 +342,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/要求.pdf" 
@@ -360,6 +373,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/添加_Kubernetes_集群.pdf" 
@@ -385,11 +401,47 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/管理_Kubernetes_集群.pdf" 
+            
+          >
+            <img src="/zh-cn/cloud-manager-kubernetes/images/pdf.png" width="16" height="16"/>
+            管理 Kubernetes 集群
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
 
 
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/知识和支持.pdf" 
@@ -462,6 +514,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/concept-kubernetes.html">
         了解 Kubernetes 数据管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task-k8s-quick-start.html">
+        快速入门
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 要求</div>
       </a>
@@ -480,9 +534,20 @@
         在 Azure 上添加集群
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-kubernetes-discover-gke.html">
         在 Google Cloud 上添加集群
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html">
-        在 Kubernetes 集群上启用数据服务
-      </a></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li class="subfolders "><a href="/zh-cn/cloud-manager-kubernetes/concept-manage-k8s.html">
+        <div class="na-navbar-padding"> 管理 Kubernetes 集群</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-trident.html">
+        安装 Astra Trident
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html">
+        管理存储类
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-persistent-volumes.html">
+        查看永久性卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-remove-cluster.html">
+        删除集群
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html">
+        启用 NetApp 云数据服务
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 知识和支持</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/support/task-support-registration.html">
@@ -502,6 +567,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+
 
   </div>
   
@@ -557,7 +623,8 @@
   data-did-you-mean="搜索 {suggestion}。" 
   data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
   data-results-found="找到 {hitCount} 个结果"
-  data-sk-es-pf-indexes=""></div>
+  data-sk-es-pf-indexes=""
+  data-flavor=""></div>
   <button class="search-all-icon n-property-bar__search-toggle-button" type="button">
     <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
       <title>search</title>
@@ -673,10 +740,7 @@
 </div>
 </footer>
 
-      </div><!-- Elasticsearch JS -->
-      <script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/bundle.js'></script>
-
-      <!-- Syntax Highlighting -->
+      </div><!-- Elasticsearch JS --><!-- Syntax Highlighting -->
       <script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/prism.js'></script>
       <script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/prism-curl.js'></script>
     </div>

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>Kubernetes 概述</title>
+  <title>Kubernetes 在 Cloud Manager 中进行数据管理</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Kubernetes 概述" />
+  <meta property="og:title" content="Kubernetes 在 Cloud Manager 中进行数据管理" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/cloud-manager-kubernetes/concept-kubernetes.html" />
-	<meta property="og:description" content="将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。" />
+	<meta property="og:description" content="Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/cloud-manager-kubernetes/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。">
   <meta name="keywords" content=" kubernetes, k8s, back up kubernetes, back up k8s, discover kubernetes cluster, discover k8s, amazon eks, eks, azure, aks, back up persistent volumes, persistent volumes, kubernetes support"><!-- Icons -->
   <link rel="icon" href="/zh-cn/cloud-manager-kubernetes/images/favicon.ico" type="image/x-icon">
 
@@ -45,11 +45,13 @@
   <link rel="stylesheet" href='/zh-cn/cloud-manager-kubernetes/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/zh-cn/cloud-manager-kubernetes/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/custom-dropdown.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/na-pagenav.css' type='text/css'>
 
   
   <link rel="stylesheet" href="/zh-cn/cloud-manager-kubernetes/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/cloud-manager-kubernetes/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
   <link rel='stylesheet' href='/zh-cn/cloud-manager-kubernetes/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
@@ -131,7 +133,7 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
-  <script src='/zh-cn/cloud-manager-kubernetes/js/version-dropdown.js'></script>
+  <script src='/zh-cn/cloud-manager-kubernetes/js/custom-dropdown.js'></script>
   <script src='/zh-cn/cloud-manager-kubernetes/js/FileSaver.min.js'></script>
   <script src='/zh-cn/cloud-manager-kubernetes/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/cloud-manager-kubernetes/js/jszip.min.js'></script>
@@ -139,17 +141,15 @@
 </head>
 
 
-  <body class role="document">
+  <body class role="document" data-flavor="">
     <div id="page" class="n-off-canvas-menu">
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
   <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-kubernetes/issues/new?body=Page%3A%20[Kubernetes 概述](https://docs.netapp.com/zh-cn/cloud-manager-kubernetes/concept-kubernetes.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/cloud-manager-kubernetes/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-kubernetes/issues/new?body=Page%3A%20[Kubernetes 在 Cloud Manager 中进行数据管理](https://docs.netapp.com/zh-cn/cloud-manager-kubernetes/concept-kubernetes.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/cloud-manager-kubernetes/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
       <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-kubernetes/blob/main/concept-kubernetes.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/cloud-manager-kubernetes/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/cloud-manager-kubernetes/images/article-sm.svg" class="github-icon" />提供者指南</a>
     </div>
@@ -245,7 +245,8 @@
           data-did-you-mean="搜索 {suggestion}。" 
           data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
           data-results-found="找到 {hitCount} 个结果"  
-          data-sk-es-pf-indexes=""></div>
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
@@ -334,6 +335,9 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
         <a target="_blank" href="/zh-cn/cloud-manager-kubernetes/pdfs/fullsite-sidebar/Kubernetes_文档.pdf" >
           <img src="/zh-cn/cloud-manager-kubernetes/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
 
@@ -346,6 +350,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/入门.pdf" 
@@ -367,6 +374,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -379,6 +388,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/要求.pdf" 
@@ -407,6 +419,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/添加_Kubernetes_集群.pdf" 
@@ -432,11 +447,47 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/管理_Kubernetes_集群.pdf" 
+            
+          >
+            <img src="/zh-cn/cloud-manager-kubernetes/images/pdf.png" width="16" height="16"/>
+            管理 Kubernetes 集群
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
 
 
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/cloud-manager-kubernetes/pdfs/sidebar/知识和支持.pdf" 
@@ -509,6 +560,8 @@
       </a>
       <ul><li class="  active "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/concept-kubernetes.html">
         了解 Kubernetes 数据管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task-k8s-quick-start.html">
+        快速入门
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 要求</div>
       </a>
@@ -527,9 +580,20 @@
         在 Azure 上添加集群
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-kubernetes-discover-gke.html">
         在 Google Cloud 上添加集群
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html">
-        在 Kubernetes 集群上启用数据服务
-      </a></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li class="subfolders "><a href="/zh-cn/cloud-manager-kubernetes/concept-manage-k8s.html">
+        <div class="na-navbar-padding"> 管理 Kubernetes 集群</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-trident.html">
+        安装 Astra Trident
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html">
+        管理存储类
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-persistent-volumes.html">
+        查看永久性卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-k8s-manage-remove-cluster.html">
+        删除集群
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html">
+        启用 NetApp 云数据服务
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 知识和支持</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-kubernetes/support/task-support-registration.html">
@@ -549,6 +613,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+
 
   </div>
   
@@ -591,14 +656,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Kubernetes 概述</h1>
+  <h1 class="n-doc__component-detail-heading">Kubernetes 在 Cloud Manager 中进行数据管理</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-01 14:23:43 +0000">04/01/2022</time>
+    <time datetime="2022-04-04 21:05:38 +0000">04/04/2022</time>
     
   
 
@@ -608,23 +673,29 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。</p>
+<p>Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astra Trident 与 Kubernetes 及其永久性卷框架本机集成，可从运行任意 NetApp 存储平台组合的系统无缝配置和管理卷。 <a href="https://docs.netapp.com/us-en/trident/index.html" target="_blank" rel="noopener">"了解有关 Trident 的更多信息"</a>。</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="功能">功能</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>您可以使用 Cloud Manager 直接管理 Kubernetes 集群。</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>将集群添加到 Canvas 中，以便在混合云基础架构中查看和管理它们</p>
+<p>安装 Astra Trident 。</p>
 </li>
 <li>
-<p>使用 Cloud Backup Service 备份永久性卷</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot-kubernetes-backup.png" alt="Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。"></span></p>
-</div>
+<p>在混合云基础架构中添加和管理集群。</p>
+</li>
+<li>
+<p>添加和管理存储类并将其连接到工作环境。</p>
+</li>
+<li>
+<p>使用 Cloud Backup Service 备份永久性卷。</p>
 </li>
 </ul>
 </div>
@@ -634,7 +705,31 @@
 <h2 id="支持的-kubernetes-部署">支持的 Kubernetes 部署</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Manager 支持在 Amazon Elastic Kubernetes Service （ Amazon EKS ）和 Microsoft Azure Kubernetes Service （ AKS ）中运行的受管 Kubernetes 集群。</p>
+<p>Cloud Manager 支持在以下环境中运行的受管 Kubernetes 集群：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="kubernetes-reqs-aws.html">"Amazon Elastic Kubernetes Service （ Amazon EKS ）"</a></p>
+</li>
+<li>
+<p><a href="kubernetes-reqs-aks.html">"Microsoft Azure Kubernetes Service （ AKS ）"</a></p>
+</li>
+<li>
+<p><a href="kubernetes-reqs-gke.html">"Google Kubernetes Engine （ GKEE ）"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="支持的-astra-trident-部署">支持的 Astra Trident 部署</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 <a href="https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html" target="_blank" rel="noopener">"查看前提条件"</a> 安装前。</p>
+</div>
+<div class="paragraph">
+<p>要升级 Astra Trident ， <a href="https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html" target="_blank" rel="noopener">"使用操作员升级"</a>。</p>
 </div>
 </div>
 </div>
@@ -761,10 +856,7 @@
 </div>
 </footer>
 
-      </div><!-- Elasticsearch JS -->
-      <script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/bundle.js'></script>
-
-      <!-- Syntax Highlighting -->
+      </div><!-- Elasticsearch JS --><script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/bundle.js'></script><!-- Syntax Highlighting -->
       <script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/prism.js'></script>
       <script type="text/javascript" src='/zh-cn/cloud-manager-kubernetes/js/prism-curl.js'></script>
     </div>
