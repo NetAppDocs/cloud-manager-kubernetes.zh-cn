@@ -20,7 +20,7 @@ sidebar:
     - title: 了解 Kubernetes 数据管理
       url: "/concept-kubernetes.html"
     - title: 快速入门
-      url: "/task-k8s-quick-start.html"
+      url: "/task/task-k8s-quick-start.html"
   - title: 要求
     entries:
     - title: AWS 上的 Kubernetes 集群
@@ -87,15 +87,15 @@ homepage:
   - title: 管理 Kubernetes 集群
     links:
     - title: 安装 Astra Trident
-      url: "/task-k8s-manage-trident.html"
+      url: "/task/task-k8s-manage-trident.html"
     - title: 管理存储类
-      url: "/task-k8s-manage-storage-classes.html"
+      url: "/task/task-k8s-manage-storage-classes.html"
     - title: 查看永久性卷
-      url: "/task-k8s-manage-persistent-volumes.html"
+      url: "/task/task-k8s-manage-persistent-volumes.html"
     - title: 删除集群
-      url: "/task-k8s-manage-remove-cluster.html"
+      url: "/task/task-k8s-manage-remove-cluster.html"
     - title: 启用数据服务
-      url: "/task/task-kubernetes-enable-services.html"
+      url: "/task/task/task-kubernetes-enable-services.html"
   - title: 获取有关 Cloud Manager 的帮助
     links:
     - title: 注册以获得支持
