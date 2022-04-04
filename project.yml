@@ -95,7 +95,7 @@ homepage:
     - title: 删除集群
       url: "/task/task-k8s-manage-remove-cluster.html"
     - title: 启用数据服务
-      url: "/task/task/task-kubernetes-enable-services.html"
+      url: "/task/task-kubernetes-enable-services.html"
   - title: 获取有关 Cloud Manager 的帮助
     links:
     - title: 注册以获得支持
