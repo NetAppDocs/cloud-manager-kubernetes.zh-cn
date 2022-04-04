@@ -40,9 +40,9 @@ RBAC 授权:: 必须在每个 Kubernetes 集群上授权 Cloud Manager Connector
 
 按照以下链接之一中的步骤进行操作。
 
-* https://docs.netapp.com/us-en/cloud-manager-connector/task-creating-connectors-aws.html["从 Cloud Manager 创建 Connector"^] 建议
-* https://docs.netapp.com/us-en/cloud-manager-connector/task-launching-aws-mktp.html["从 AWS Marketplace 创建 Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-connector/task-installing-linux.html["在 AWS 的现有 Linux 主机上安装 Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["从 Cloud Manager 创建 Connector"^] 建议
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-aws-mktp.html["从 AWS Marketplace 创建 Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在 AWS 的现有 Linux 主机上安装 Connector"^]
 
 
 

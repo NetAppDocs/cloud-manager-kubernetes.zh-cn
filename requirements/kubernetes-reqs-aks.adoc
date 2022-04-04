@@ -40,9 +40,9 @@ RBAC 授权:: Cloud Manager 支持使用和不使用 Active Directory 的已启�
 
 按照以下链接之一中的步骤进行操作。
 
-* https://docs.netapp.com/us-en/cloud-manager-connector/task-creating-connectors-azure.html["从 Cloud Manager 创建 Connector"^] 建议
-* https://docs.netapp.com/us-en/cloud-manager-connector/task-launching-azure-mktp.html["从 Azure Marketplace 创建 Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-connector/task-installing-linux.html["在现有 Linux 主机上安装 Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html["从 Cloud Manager 创建 Connector"^] 建议
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["从 Azure Marketplace 创建 Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在现有 Linux 主机上安装 Connector"^]
 
 
 

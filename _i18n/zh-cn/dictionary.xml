@@ -56,11 +56,8 @@
   <block id="63959f97faa9987d540350850a41505e" category="section-title">创建新的 Connector</block>
   <block id="7462e2b2097ede16db64534b30f77751" category="paragraph">按照以下链接之一中的步骤进行操作。</block>
   <block id="a19a6ffe0bb158286b013144b83f6544" category="inline-link">从 Cloud Manager 创建 Connector</block>
-  <block id="ec14774524c6a2b7d2548129343136f7" category="list-text"><block ref="2817c24c841f5ada48665c37ffe210fe" category="inline-link-rx"></block> 建议</block>
   <block id="e96bc5b1e40abf07ff070b96c65057db" category="inline-link">从 AWS Marketplace 创建 Connector</block>
-  <block id="e001c3794817ef05f699c8338c800782" category="list-text"><block ref="e001c3794817ef05f699c8338c800782" category="inline-link-rx"></block></block>
   <block id="1bc7cdde75a8dfff8d21690bae5558b4" category="inline-link">在 AWS 的现有 Linux 主机上安装 Connector</block>
-  <block id="e8c4c9777375eaca1fbccc19cced0f47" category="list-text"><block ref="e8c4c9777375eaca1fbccc19cced0f47" category="inline-link-rx"></block></block>
   <block id="400029e32a94249459e83aadc7247559" category="section-title">将所需权限添加到现有 Connector</block>
   <block id="91377322d2f9077c583ad8a53facc870" category="paragraph">从 3.9.13 版开始，任何 _new_ 创建的 Connectors 均包含三个新的 AWS 权限，用于发现和管理 Kubernetes 集群。如果您在此版本之前创建了 Connector ，则需要修改此 Connector 的 IAM 角色的现有策略以提供权限。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
@@ -111,9 +108,7 @@
   <block id="529dbfeb8ae591bdc60b1e28dbcdacc6" category="list-text">必须使用所需权限在 Google 中运行 Connector 。 <block ref="666096be9a7c0cee4f03722fd9c8c93c" category="inline-xref-macro-rx"></block>。</block>
   <block id="6f9b9566eef8a735c30e29931c068a03" category="list-text">Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 GKE 集群上授权 Cloud Manager Connector 角色。 <block ref="ed89a5c7598981ce49ff49e89b6578d7" category="inline-xref-macro-rx"></block>。</block>
   <block id="d6eac18df77e1a94121eca44e6d305a9" category="paragraph">要发现和管理 Kubernetes 集群，需要使用 Google 中的 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。</block>
-  <block id="51ab55b9b09987b2a41036d412c427a3" category="list-text"><block ref="d559be1fb712c0e3a1eb24a7ac2f5fb8" category="inline-link-rx"></block> 建议</block>
   <block id="d1070a8b89935adc6bb191d1e912b5ca" category="inline-link">在现有 Linux 主机上安装 Connector</block>
-  <block id="5ebd5f6c069fcc937031e077c480b1a3" category="list-text"><block ref="5ebd5f6c069fcc937031e077c480b1a3" category="inline-link-rx"></block></block>
   <block id="a7d3a387d14ffdcae3ba49d52638ebb6" category="section-title">将所需权限添加到现有 Connector （以发现受管 GKEE 集群）</block>
   <block id="960373499947a97e65ed912d5cea84f4" category="paragraph">如果要发现受管 GKEE 集群，您可能需要修改 Connector 的自定义角色以提供权限。</block>
   <block id="afcaeb8a33eef207414e875d7fa75193" category="inline-link-macro">云控制台</block>
@@ -142,9 +137,7 @@
   <block id="65a6ead622485d947a36632d3fbe81b8" category="list-text">Connector 必须使用所需权限在 Azure 中运行。 <block ref="666096be9a7c0cee4f03722fd9c8c93c" category="inline-xref-macro-rx"></block>。</block>
   <block id="0ab069b73427d83a2a8fc9c05092d504" category="list-text">Cloud Manager 支持使用和不使用 Active Directory 的已启用 RBAC 的集群。必须在每个 Azure 集群上授权 Cloud Manager Connector 角色。 <block ref="ed89a5c7598981ce49ff49e89b6578d7" category="inline-xref-macro-rx"></block>。</block>
   <block id="eb0e851cde19636b32bfb756a21ff840" category="paragraph">要发现和管理 Kubernetes 集群，需要使用 Azure 中的 Cloud Manager Connector 。您需要创建新的 Connector 或使用具有所需权限的现有 Connector 。</block>
-  <block id="12ef67b6ab2d2853a436e5da856a6b17" category="list-text"><block ref="5cbf8900c78a1e8a979fc4f46f7d5fac" category="inline-link-rx"></block> 建议</block>
   <block id="6505fd7495c0d65d3dcf8a473c69ddcf" category="inline-link">从 Azure Marketplace 创建 Connector</block>
-  <block id="bb931bec85a42f27f769f8bd1ee02a3a" category="list-text"><block ref="bb931bec85a42f27f769f8bd1ee02a3a" category="inline-link-rx"></block></block>
   <block id="51024acb2d849b543d1d3b8ba5ac16fe" category="section-title">向现有 Connector 添加所需权限（以发现受管 AKS 集群）</block>
   <block id="7b44ac8a40c4268ddeeb5c27394240a8" category="paragraph">如果要发现受管 AKS 集群，您可能需要修改 Connector 的自定义角色以提供权限。</block>
   <block id="c6d0403561ba931925faedb251300c4d" category="list-text">确定分配给 Connector 虚拟机的角色：</block>
@@ -261,4 +254,11 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+  <block id="a6a798b867f9fc8417745a183efd7eb6" category="list-text"><block ref="022a32848e9a635fb610022260eb258d" category="inline-link-rx"></block> 建议</block>
+  <block id="8d55e3e5808e7e03da07d756385c832d" category="list-text"><block ref="8d55e3e5808e7e03da07d756385c832d" category="inline-link-rx"></block></block>
+  <block id="6014ba23e9fc5f2c6887737ea05510d8" category="list-text"><block ref="6b9aa097c47f43d8df1053195d75d9bf" category="inline-link-rx"></block> 建议</block>
+  <block id="d411eaec4bb582e5916583ac64fcdf30" category="list-text"><block ref="d411eaec4bb582e5916583ac64fcdf30" category="inline-link-rx"></block></block>
+  <block id="e21cac46a7c03ad31fa2e72981de80dc" category="list-text"><block ref="4f38115e376c78857e2927695cec2c43" category="inline-link-rx"></block> 建议</block>
+  <block id="df9caceb718925bf1c4a4541fb09798b" category="list-text"><block ref="df9caceb718925bf1c4a4541fb09798b" category="inline-link-rx"></block></block>
+  <block id="81d769953d03a391b5322bf4f84f2aff" category="list-text"><block ref="81d769953d03a391b5322bf4f84f2aff" category="inline-link-rx"></block></block>
 </blocks>
