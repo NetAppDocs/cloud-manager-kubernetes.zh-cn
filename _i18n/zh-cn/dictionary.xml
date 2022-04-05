@@ -5,17 +5,14 @@
   <block id="572154af04ccf23551e78649302c6f7b" category="section-title">支持 Google Cloud 中的 Kubernetes 集群</block>
   <block id="45cbe8fd766702dd0ad0022cbde336ce" category="paragraph">现在，您可以使用 Cloud Manager 在 Google Cloud 中添加和管理受管 Google Kubernetes Engine （ GKEE ）集群和自管 Kubernetes 集群。</block>
   <block id="f1b377c7d4b75112665bc3e7ee7c340b" category="inline-link-macro">了解如何在 Google Cloud 中开始使用 Kubernetes 集群</block>
-  <block id="3ce827c1394c58f2881787b09251ab2d" category="paragraph"><block ref="e7cb8264f65fe12e2e34a432cb2daa9f" category="inline-link-macro-rx"></block>。</block>
   <block id="a654243ef958097102b375693f5579bb" category="section-title">支持 Azure 中的 Kubernetes 集群</block>
   <block id="8856f1df28666fb615f0de120179dd80" category="paragraph">现在，您可以使用 Cloud Manager 在 Azure 中添加和管理受管 Azure Kubernetes 集群（ AKS ）和自管 Kubernetes 集群。</block>
   <block id="8e2d16714747b48d3d5d0993c14ca91c" category="inline-link-macro">开始在 Azure 中使用 Kubernetes 集群</block>
-  <block id="2516f4b40f47332c7df68b7816e02b00" category="paragraph"><block ref="2516f4b40f47332c7df68b7816e02b00" category="inline-link-macro-rx"></block></block>
   <block id="1dca9cae8959517f7a37b2277e33b485" category="section-title">支持 AWS 中的 Kubernetes 集群</block>
   <block id="40396b2dd864537704e1a71862a49298" category="paragraph">现在，您可以将受管 Kubernetes 集群添加到 Cloud Manager 的 Canvas 中，以实现高级数据管理。</block>
   <block id="9bc9d366922b7839c22a9d3f44b59ab5" category="list-text">发现 Amazon EKS 集群</block>
   <block id="23225952418ffe65dda9099dae1c476c" category="list-text">使用 Cloud Backup 备份永久性卷</block>
   <block id="d5f64dd836c164f17e32528a31fdeea5" category="inline-link-macro">了解有关 Kubernetes 支持的更多信息</block>
-  <block id="541ec813f320b6a90ccb3d382d774f7e" category="paragraph"><block ref="b46c52759a0e98b71be9f6aed99e1b0c" category="inline-link-macro-rx"></block>。</block>
   <block id="5629dc3c8dacdcb31e6d3bf6d7586e32" category="admonition">现有 Kubernetes 服务（可通过 * K8* 选项卡访问）已弃用，并将在未来版本中删除。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="a0d9f3ae32f1b7df23e0071308b6cbe5" category="inline-image-macro">Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。</block>
@@ -363,12 +360,7 @@
   <block id="6e7cef0ef9634162a88caaa29c694893" category="paragraph"><block ref="6e7cef0ef9634162a88caaa29c694893" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0a7f3527cff1099d537e438e6d62de3f" category="paragraph">在资源页面中，您可以：</block>
   <block id="ae98d4fcb6e8e5720784f6c4936d3fda" category="list-text">查看 Kubernetes 集群状态。</block>
-  <block id="4c1d1c29dc032acaba6d87523245901a" category="list-text">确认已安装 Astra Trident 。请参见 <block ref="345832d3138c1eb0f6633c370a7f6028" category="inline-link-macro-rx"></block>。</block>
-  <block id="1144aea980959108cfaf2514fbf4950d" category="list-text">添加和删除存储类。请参见 <block ref="9e82adf493a42c7e6eea0f3ece5f1523" category="inline-link-macro-rx"></block>。</block>
-  <block id="148ab235d087e61e2b2f7fd1f1c69a5f" category="list-text">查看永久性卷。请参见 <block ref="cd4689f963d360c6dbfc83d0ed5ebd22" category="inline-link-macro-rx"></block>。</block>
-  <block id="001f7c78e2e0007ed1165a22b8a857c7" category="list-text">从工作空间中删除 Kubernetes 集群。请参见 <block ref="2345a967fe9f27d7be623e42d7d8b4c4" category="inline-link-macro-rx"></block>。</block>
   <block id="c83be9d30dd0d8b55fb8bdbf6f11eb85" category="inline-link-macro">使用 NetApp 云数据服务</block>
-  <block id="5988e88f080603d109047fd28346431d" category="list-text">激活或查看 Cloud Backup 。请参见 <block ref="970aaadca61cb9a29c8e2b76716ffafe" category="inline-link-macro-rx"></block>。</block>
   <block id="33729732e4c013e81e5576920fedbc76" category="sidebar">启用 NetApp 云数据服务</block>
   <block id="ad806d4b803a5aa7358400786d14dec0" category="section-title">2022 年 4 月 4 日</block>
   <block id="a84f0102d02caeeb1c0e554f032c6e35" category="paragraph">现在， Kubernetes 集群管理已增强了直接与集群工作环境的集成。新的 <block ref="a7ce12c998c9439767584776d325ea5b" category="inline-link-macro-rx"></block> 让您快速启动和运行。</block>
@@ -394,4 +386,12 @@
   <block id="cd6ebc8356b1da3789ba04ae3e5aaea3" category="list-text"><block ref="aa0dc252414fb173eaea918703c4a84f" category="inline-link-macro-rx"></block> 建议</block>
   <block id="946fbd834f2d7dd02243acdd3cd2af41" category="list-text"><block ref="946fbd834f2d7dd02243acdd3cd2af41" category="inline-link-macro-rx"></block></block>
   <block id="6daf52898d494bb924b8e794cabb00ca" category="list-text"><block ref="6daf52898d494bb924b8e794cabb00ca" category="inline-link-macro-rx"></block></block>
+  <block id="6fcf7676e8aae6ddc7b3f104efce8aab" category="paragraph"><block ref="5416dc5374fce9a230fcbd66732d82fb" category="inline-link-macro-rx"></block>。</block>
+  <block id="7f3fba83864e800e754c057187c91c9a" category="paragraph"><block ref="7f3fba83864e800e754c057187c91c9a" category="inline-link-macro-rx"></block></block>
+  <block id="4e8dc58f86c5b2a120ce6625e2c53adf" category="paragraph"><block ref="ca8428b0b36dc1f5bee5c45f13cb9819" category="inline-link-macro-rx"></block>。</block>
+  <block id="ae0592ef5303fb9aef624fe7d88c9df0" category="list-text">确认已安装 Astra Trident 。请参见 <block ref="1a59dd77a0d64111faec261144239ca1" category="inline-link-macro-rx"></block>。</block>
+  <block id="37b5997855958384cd2d8f88d0ea2dd5" category="list-text">添加和删除存储类。请参见 <block ref="b3baecb7f739f8467c020eefaf640928" category="inline-link-macro-rx"></block>。</block>
+  <block id="642589473fadbb6740e9f7d1a3850cf1" category="list-text">查看永久性卷。请参见 <block ref="5d330c78fdbd034ad3466dadfcb8a623" category="inline-link-macro-rx"></block>。</block>
+  <block id="89a12c12c4f14698d4d0f49fd915edb9" category="list-text">从工作空间中删除 Kubernetes 集群。请参见 <block ref="33d1886382ffb71c3c53768c25f3a54f" category="inline-link-macro-rx"></block>。</block>
+  <block id="cc4669d33ef06bf93b19ebf4331f6973" category="list-text">激活或查看 Cloud Backup 。请参见 <block ref="f48a95ae0530624cb3f954263c78705c" category="inline-link-macro-rx"></block>。</block>
 </blocks>
