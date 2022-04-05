@@ -15,7 +15,8 @@ summary: 在将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加
 [role="lead"]
 您可以将 AWS 上的受管 Amazon Elastic Kubernetes Service （ EKS ）集群或自管 Kubernetes 集群添加到 Cloud Manager 。在将集群添加到 Cloud Manager 之前，您需要确保满足以下要求。
 
-本主题使用 _Kubernetes cluster_ ，其中 EKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。
+
+NOTE: 本主题使用 _Kubernetes cluster_ ，其中 EKS 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。
 
 
 
@@ -44,9 +45,9 @@ RBAC 授权:: 必须在每个 Kubernetes 集群上授权 Cloud Manager Connector
 
 按照以下链接之一中的步骤进行操作。
 
-* link:task_creating_connectors_aws.html["从 Cloud Manager 创建 Connector"] 建议
-* link:task_launching_aws_mktp.html["从 AWS Marketplace 创建 Connector"]
-* link:task_installing_linux.html["在 AWS 的现有 Linux 主机上安装 Connector"]
+* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["从 Cloud Manager 创建 Connector"^] 建议
+* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-aws-mktp.html["从 AWS Marketplace 创建 Connector"^]
+* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在 AWS 的现有 Linux 主机上安装 Connector"^]
 
 
 

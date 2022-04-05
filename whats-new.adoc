@@ -23,16 +23,15 @@ summary: 了解 Cloud Manager 中 Kubernetes 的新增功能。
 
 === 使用 Cloud Manager 资源页面管理 Kubernetes 集群
 
-* 现在， Kubernetes 集群管理已增强了直接与集群工作环境的集成。现在，您可以从集群资源页面执行以下操作。
-+
-** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-trident.html["安装 Astra Trident"]
-** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html["添加存储类"]
-** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-persistent-volumes.html["查看永久性卷"]
-** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-remove-cluster.html["删除集群"]
-** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html["启用数据服务"]
+现在， Kubernetes 集群管理已增强了直接与集群工作环境的集成。新的 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-quick-start.html["快速入门"] 让您快速启动和运行。
 
+现在，您可以从集群资源页面执行以下操作。
 
-* 新的 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-quick-start.html["快速入门"] 让您快速启动和运行。
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-trident.html["安装 Astra Trident"]
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html["添加存储类"]
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-persistent-volumes.html["查看永久性卷"]
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-remove-cluster.html["删除集群"]
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html["启用数据服务"]
 
 
 

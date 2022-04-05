@@ -15,7 +15,8 @@ summary: 您可以使用 Cloud Manager 在 Google 中添加和管理受管 Googl
 [role="lead"]
 您可以使用 Cloud Manager 在 Google 中添加和管理受管 Google Kubernetes Engine （ GKEE ）集群和自管 Kubernetes 集群。在将集群添加到 Cloud Manager 之前，请确保满足以下要求。
 
-本主题使用 _Kubernetes cluster_ ，其中 GKE- 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。
+
+NOTE: 本主题使用 _Kubernetes cluster_ ，其中 GKE- 和自管理 Kubernetes 集群的配置相同。在配置不同的位置指定集群类型。
 
 
 
@@ -44,8 +45,8 @@ RBAC 授权:: Cloud Manager 支持使用和不使用 Active Directory 的已启�
 
 按照以下链接之一中的步骤进行操作。
 
-* link:task_creating_connectors_gcp.html["从 Cloud Manager 创建 Connector"] 建议
-* link:task_installing_linux.html["在现有 Linux 主机上安装 Connector"]
+* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["从 Cloud Manager 创建 Connector"^] 建议
+* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在现有 Linux 主机上安装 Connector"^]
 
 
 

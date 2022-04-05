@@ -15,7 +15,7 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud
 [role="lead"]
 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 确认兼容的 Astra Trident 安装或安装 Astra Trident 。需要使用四个最新版本的 Astra Trident 之一。
 
-要了解有关 Astra Trident 的更多信息，请参见 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 文档"]。
+要了解有关 Astra Trident 的更多信息，请参见 link:https://docs.netapp.com/us-en/trident/index.html["Astra Trident 文档"^]。
 
 
 NOTE: 如果未安装 Astra Trident ，或者安装了不兼容版本的 Astra Trident ，则集群将显示需要执行操作。

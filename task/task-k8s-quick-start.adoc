@@ -25,25 +25,25 @@ summary: 将 Kubernetes 集群添加到 Cloud Manager 中，以便通过几个�
 确保您的环境满足集群类型的前提条件。
 
 [role="quick-margin-para"]
-link:https://docs.netapp.com/us-en/occm/kubernetes-reqs-aws.html["AWS 中 Kubernetes 集群的要求"]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html["AWS 中 Kubernetes 集群的要求"^]
 
 [role="quick-margin-para"]
-link:https://docs.netapp.com/us-en/occm/kubernetes-reqs-aks.html["Azure 中 Kubernetes 集群的要求"]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html["Azure 中 Kubernetes 集群的要求"^]
 
 [role="quick-margin-para"]
-link:https://docs.netapp.com/us-en/occm/kubernetes-reqs-gke.html["Google Cloud 中的 Kubernetes 集群的要求"]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html["Google Cloud 中的 Kubernetes 集群的要求"^]
 
 [role="quick-margin-para"]
 您可以使用 Cloud Manager 添加 Kubernetes 集群并将其连接到工作环境。
 
 [role="quick-margin-para"]
-link:https://docs.netapp.com/us-en/occm/task-kubernetes-discover-aws.html["添加 Amazon Kubernetes 集群"]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-aws.html["添加 Amazon Kubernetes 集群"^]
 
 [role="quick-margin-para"]
-link:https://docs.netapp.com/us-en/occm/task-kubernetes-discover-azure.html["添加 Azure Kubernetes 集群"]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-azure.html["添加 Azure Kubernetes 集群"^]
 
 [role="quick-margin-para"]
-link:https://docs.netapp.com/us-en/occm/task-kubernetes-discover-gke.html["添加 Google Cloud Kubernetes 集群"]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-gke.html["添加 Google Cloud Kubernetes 集群"^]
 
 [role="quick-margin-para"]
 使用原生 Kubernetes 接口和构造请求和管理永久性卷。Cloud Manager 可创建 NFS 和 iSCSI 存储类，您可以在配置永久性卷时使用这些存储类。

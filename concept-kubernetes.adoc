@@ -33,9 +33,9 @@ Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astr
 
 Cloud Manager 支持在以下环境中运行的受管 Kubernetes 集群：
 
-* link:kubernetes-reqs-aws.html["Amazon Elastic Kubernetes Service （ Amazon EKS ）"]
-* link:kubernetes-reqs-aks.html["Microsoft Azure Kubernetes Service （ AKS ）"]
-* link:kubernetes-reqs-gke.html["Google Kubernetes Engine （ GKEE ）"]
+* link:/requirements/kubernetes-reqs-aws.html["Amazon Elastic Kubernetes Service （ Amazon EKS ）"]
+* link:/requirements/kubernetes-reqs-aks.html["Microsoft Azure Kubernetes Service （ AKS ）"]
+* link:/requirements/kubernetes-reqs-gke.html["Google Kubernetes Engine （ GKEE ）"]
 
 
 
