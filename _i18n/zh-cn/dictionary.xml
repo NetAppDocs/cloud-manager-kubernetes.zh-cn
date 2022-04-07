@@ -179,7 +179,6 @@
   <block id="6e53f86d2931b115352479b77b41a90e" category="inline-image-macro">导入 Kubernetes 集群页面的屏幕截图，其中包含配置文件和可用集群表。</block>
   <block id="c0051c23ce1a6dfb0a01449b18d415ad" category="paragraph"><block ref="c0051c23ce1a6dfb0a01449b18d415ad" category="inline-image-macro-rx" type="image"></block></block>
   <block id="88115501de56483f3bf8dd5514ce1d84" category="paragraph">目前， Kubernetes 集群支持 Cloud Backup 。您可以使用 Cloud Backup 将永久性卷备份到对象存储。</block>
-  <block id="963408f4aa8e949d60c3b0befc33267d" category="inline-link">转到 Cloud Backup 文档，了解如何备份永久性卷</block>
   <block id="a55035d13d56568118050b48f14c492f" category="summary">将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到 Cloud Manager 中，以便开始将永久性卷备份到 Amazon S3 。</block>
   <block id="293e3749aa00f6ba4c48a0f2d8f93ba2" category="doc">将 Amazon Kubernetes 集群添加到 Cloud Manager</block>
   <block id="29508a151c67e3d0dd86c039a47344fd" category="list-text">选择 * Amazon Web Services* &gt; * Kubernetes Cluster* ，然后单击 * 下一步 * 。</block>
@@ -368,7 +367,6 @@
   <block id="ef1bf4095b622ba80ac24b48b8e45eac" category="section-title">2022 年 1 月 11 日</block>
   <block id="f61163b681442ac500a8018c87241770" category="section-title">2021 年 11 月 28 日</block>
   <block id="49884bb39e4730239c5590a42f88d306" category="paragraph">要了解有关 Astra Trident 的更多信息，请参见 <block ref="d243cca937364184efa824b0525b876a" category="inline-link-macro-rx"></block>。</block>
-  <block id="6fbf44e98207180f6dea3f48ebff3214" category="paragraph"><block ref="5f51a9553940e8daed7fd1ec3a5d3f5a" category="inline-link-macro-rx"></block>。</block>
   <block id="72cf03e83eb761652a0d13086f72c9d7" category="paragraph"><block ref="72cf03e83eb761652a0d13086f72c9d7" category="inline-link-macro-rx"></block></block>
   <block id="4a485bbe8e1857cd9e015d159f30b24d" category="paragraph"><block ref="4a485bbe8e1857cd9e015d159f30b24d" category="inline-link-macro-rx"></block></block>
   <block id="a29db47c768f9047aab40d9abfb20adb" category="paragraph"><block ref="a29db47c768f9047aab40d9abfb20adb" category="inline-link-macro-rx"></block></block>
@@ -394,4 +392,6 @@
   <block id="89a12c12c4f14698d4d0f49fd915edb9" category="list-text">从工作空间中删除 Kubernetes 集群。请参见 <block ref="33d1886382ffb71c3c53768c25f3a54f" category="inline-link-macro-rx"></block>。</block>
   <block id="cc4669d33ef06bf93b19ebf4331f6973" category="list-text">激活或查看 Cloud Backup 。请参见 <block ref="f48a95ae0530624cb3f954263c78705c" category="inline-link-macro-rx"></block>。</block>
   <block id="335c34584cec7a2f7345f04424506de1" category="doc">Kubernetes 集群文档</block>
+  <block id="7f502b44c9ac6d1d030af7019328b0f2" category="inline-link-macro">了解如何使用 Cloud Backup 保护 Kubernetes 集群数据</block>
+  <block id="608303aeee3cf05fa80edbe0bfe6fa7f" category="paragraph"><block ref="6bac3e672a275b3f2755f168dc31fbab" category="inline-link-macro-rx"></block>。</block>
 </blocks>
