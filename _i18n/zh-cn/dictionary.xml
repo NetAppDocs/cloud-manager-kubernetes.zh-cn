@@ -138,7 +138,6 @@
   <block id="0c90ae4dc73f81dbbd0a6e0299f5deb5" category="paragraph"><block ref="0c90ae4dc73f81dbbd0a6e0299f5deb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4ebffaff3187e96f25bb8b4b25978bda" category="list-text">如果要部署 * 自管理 Kubernetes 集群 * ，则需要任何授权用户的用户名。</block>
   <block id="e59cbc41f2797427c91406bb0b03401e" category="summary">将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级数据管理。</block>
-  <block id="d9348d075dc7b3c91cff99d56dfc327b" category="doc">Kubernetes 文档</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
@@ -394,4 +393,5 @@
   <block id="642589473fadbb6740e9f7d1a3850cf1" category="list-text">查看永久性卷。请参见 <block ref="5d330c78fdbd034ad3466dadfcb8a623" category="inline-link-macro-rx"></block>。</block>
   <block id="89a12c12c4f14698d4d0f49fd915edb9" category="list-text">从工作空间中删除 Kubernetes 集群。请参见 <block ref="33d1886382ffb71c3c53768c25f3a54f" category="inline-link-macro-rx"></block>。</block>
   <block id="cc4669d33ef06bf93b19ebf4331f6973" category="list-text">激活或查看 Cloud Backup 。请参见 <block ref="f48a95ae0530624cb3f954263c78705c" category="inline-link-macro-rx"></block>。</block>
+  <block id="335c34584cec7a2f7345f04424506de1" category="doc">Kubernetes 集群文档</block>
 </blocks>
