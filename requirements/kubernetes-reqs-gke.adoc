@@ -134,7 +134,7 @@ image:screenshot-gke-unique-id.png["Cloud Console 中服务帐户详细信息的
 
 [source, yaml]
 ----
-NEED FROM apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
     name: cloudmanager-access-clusterrole
