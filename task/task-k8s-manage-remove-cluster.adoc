@@ -6,6 +6,7 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud
 ---
 = 从工作空间中删除 Kubernetes 集群
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

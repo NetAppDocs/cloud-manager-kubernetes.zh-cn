@@ -6,6 +6,7 @@ summary: 您可以使用 Cloud Manager 安装 Astra Trident ，配置存储类�
 ---
 = 管理 Kubernetes 集群
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

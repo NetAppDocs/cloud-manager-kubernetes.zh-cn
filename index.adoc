@@ -7,6 +7,7 @@ summary: 将受管 Kubernetes 集群添加到 Cloud Manager 中以进行高级�
 ---
 = Kubernetes 集群文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

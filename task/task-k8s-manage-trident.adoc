@@ -6,6 +6,7 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud
 ---
 = 安装 Astra Trident
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

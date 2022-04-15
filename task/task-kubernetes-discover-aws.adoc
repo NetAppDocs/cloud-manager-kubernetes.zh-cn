@@ -6,6 +6,7 @@ summary: 将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到
 ---
 = 将 Amazon Kubernetes 集群添加到 Cloud Manager
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

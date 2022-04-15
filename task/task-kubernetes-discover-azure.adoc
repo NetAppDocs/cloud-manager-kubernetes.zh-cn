@@ -6,6 +6,7 @@ summary: 将 Kubernetes 集群添加到 Cloud Manager 中，以便开始将永�
 ---
 = 将 Azure Kubernetes 集群添加到 Cloud Manager
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -68,7 +68,7 @@ homepage:
     - title: 了解 Kubernetes 数据管理
       url: "/concept-kubernetes.html"
     - title: 快速入门
-      url: "/task-k8s-quick-start.html"
+      url: "/task/task-k8s-quick-start.html"
   - title: 要求
     links:
     - title: AWS 上的 Kubernetes 集群

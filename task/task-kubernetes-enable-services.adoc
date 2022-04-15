@@ -6,6 +6,7 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetAp
 ---
 = 将 NetApp 云数据服务与 Kubernetes 集群结合使用
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

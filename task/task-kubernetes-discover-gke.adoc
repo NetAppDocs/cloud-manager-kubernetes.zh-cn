@@ -6,6 +6,7 @@ summary: 您可以发现 Kubernetes 集群或将其导入到 Cloud Manager 中�
 ---
 = 将 Google Cloud Kubernetes 集群添加到 Cloud Manager
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

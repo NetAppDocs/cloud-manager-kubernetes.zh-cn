@@ -6,6 +6,7 @@ summary: 将 Kubernetes 集群添加到 Cloud Manager 中，以便通过几个�
 ---
 = 开始使用 Kubernetes 集群
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

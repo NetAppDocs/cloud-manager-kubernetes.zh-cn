@@ -6,6 +6,7 @@ summary: Astra Trident 是由 NetApp 维护的一个完全受支持的开源项�
 ---
 = Kubernetes 在 Cloud Manager 中进行数据管理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
