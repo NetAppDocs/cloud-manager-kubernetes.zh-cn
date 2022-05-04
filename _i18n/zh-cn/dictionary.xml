@@ -252,11 +252,6 @@
   <block id="6063d5ed0fa76ced94f0f7adbbd7b833" category="paragraph">Kubernetes 集群将从工作空间中删除，并且在 Canvas 上不再可见。</block>
   <block id="63c24f9994279591340cd89dcb19f3cd" category="summary">将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 管理存储类。</block>
   <block id="e8b9c3a9859a62e9a58431c3b61f75d5" category="doc">管理存储类</block>
-  <block id="76a5809985aa691391b31d5f20c17a42" category="admonition">如果未定义存储类，则集群将显示需要执行操作。</block>
-  <block id="8e79c25356bb563e28e9ae0a108b960b" category="list-text">确认已安装 Astra Trident 的四个最新版本之一。</block>
-  <block id="af1dab031c2b915817ef7d5169fdfcfb" category="list-text">单击 * 添加存储类 * 为 Kubernetes 集群定义存储类。</block>
-  <block id="790a7b05e43ed5454554eef9671154f0" category="inline-image-macro">显示添加存储类按钮的 K8s 资源页面的屏幕截图。</block>
-  <block id="bac110b30291a86e52ffa944c5ba6bb5" category="paragraph"><block ref="bac110b30291a86e52ffa944c5ba6bb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6a8b915c7d54f345c01102c31e00f7e1" category="list-text">提供存储类的名称，选择定义选项，然后单击 * 下一步 * 。</block>
   <block id="26e844784a066d14af9464e1c0366829" category="inline-image-macro">显示 K8s 存储类定义选项的屏幕截图。</block>
   <block id="2204d229f6006a328688918431aab2cf" category="paragraph"><block ref="2204d229f6006a328688918431aab2cf" category="inline-image-macro-rx" type="image"></block></block>
@@ -440,4 +435,11 @@
   <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">单击 * 致电我们 * 可查找 NetApp 技术支持的电话号码。</block>
   <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">单击 * 打开问题描述 * ，选择一个选项，然后单击 * 发送 * 。</block>
   <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">NetApp 代表将审核您的案例，并尽快与您联系。</block>
+  <block id="f03623a9e2b73dcb7ae9b7b837190c39" category="section-title">2022年5月8日</block>
+  <block id="6401d12bcac1f01899ab494a0a6d8edb" category="section-title">拖放以添加存储类</block>
+  <block id="0f808082ee99c2acfbcb1661162034f6" category="paragraph">现在、您可以将Kubernetes集群拖放到Cloud Volumes ONTAP 工作环境中、以便直接从Canvas添加存储类。</block>
+  <block id="d23895cd28f2e8e5d3074279cea7aacf" category="inline-link-macro">添加存储类</block>
+  <block id="2556925e0b340fdd647987c6af7fbee9" category="paragraph"><block ref="2556925e0b340fdd647987c6af7fbee9" category="inline-link-macro-rx"></block></block>
+  <block id="1eec33c68401a6eebb58a392153f045b" category="admonition">如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。</block>
+  <block id="a5cc9f7714a0767ece3c08caff06314d" category="list-text">从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 工作环境中以打开存储类向导。</block>
 </blocks>

@@ -17,19 +17,14 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud
 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 管理存储类。
 
 
-NOTE: 如果未定义存储类，则集群将显示需要执行操作。
+NOTE: 如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。
 
 
 
 == 添加存储类
 
 .步骤
-. 双击 Canvas 上的 Kubernetes 工作环境或单击 * 进入工作环境 * 。
-. 确认已安装 Astra Trident 的四个最新版本之一。
-. 单击 * 添加存储类 * 为 Kubernetes 集群定义存储类。
-+
-image:screenshot-k8s-add-storage-class.png["显示添加存储类按钮的 K8s 资源页面的屏幕截图。"]
-
+. 从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 工作环境中以打开存储类向导。
 . 提供存储类的名称，选择定义选项，然后单击 * 下一步 * 。
 +
 image:screenshot-k8s-define-storage-class.png["显示 K8s 存储类定义选项的屏幕截图。"]
