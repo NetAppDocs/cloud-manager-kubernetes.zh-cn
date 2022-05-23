@@ -439,7 +439,7 @@
   <block id="1eec33c68401a6eebb58a392153f045b" category="admonition">如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。</block>
   <block id="a5cc9f7714a0767ece3c08caff06314d" category="list-text">从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 工作环境中以打开存储类向导。</block>
   <block id="19f4ed17c6ec00f67063b70e40bfc661" category="section-title">2022年5月4日</block>
-  <block id="139fb1a5c65daf5441e1ede5235a21de" category="list-text"><block ref="139fb1a5c65daf5441e1ede5235a21de" category="inline-link-macro-rx"></block></block>
-  <block id="d5f34ac67d70bd0953fb12248b0a1e2b" category="list-text"><block ref="d5f34ac67d70bd0953fb12248b0a1e2b" category="inline-link-macro-rx"></block></block>
-  <block id="78b8a8015761a257c74b564dd2abedb7" category="list-text"><block ref="78b8a8015761a257c74b564dd2abedb7" category="inline-link-macro-rx"></block></block>
+  <block id="79ee39f20c9b076e39473401e33c5f12" category="list-text"><block ref="79ee39f20c9b076e39473401e33c5f12" category="inline-link-macro-rx"></block></block>
+  <block id="df02ebf4bbdbd23dcf4001f89e193718" category="list-text"><block ref="df02ebf4bbdbd23dcf4001f89e193718" category="inline-link-macro-rx"></block></block>
+  <block id="0d66e7de3df254882c2f4ec49e44ba2f" category="list-text"><block ref="0d66e7de3df254882c2f4ec49e44ba2f" category="inline-link-macro-rx"></block></block>
 </blocks>
