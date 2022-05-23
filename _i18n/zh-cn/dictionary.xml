@@ -364,9 +364,6 @@
   <block id="1cc3b91ac3f47d8a34620fe828068db4" category="paragraph"><block ref="1cc3b91ac3f47d8a34620fe828068db4" category="inline-link-macro-rx"></block></block>
   <block id="6ba362adaf84a4c90e3a5e2018f325f2" category="paragraph"><block ref="6ba362adaf84a4c90e3a5e2018f325f2" category="inline-link-macro-rx"></block></block>
   <block id="cfc29f6918b9699178c2eb110f408c5c" category="paragraph"><block ref="cfc29f6918b9699178c2eb110f408c5c" category="inline-link-macro-rx"></block></block>
-  <block id="139fb1a5c65daf5441e1ede5235a21de" category="list-text"><block ref="139fb1a5c65daf5441e1ede5235a21de" category="inline-link-macro-rx"></block></block>
-  <block id="d5f34ac67d70bd0953fb12248b0a1e2b" category="list-text"><block ref="d5f34ac67d70bd0953fb12248b0a1e2b" category="inline-link-macro-rx"></block></block>
-  <block id="78b8a8015761a257c74b564dd2abedb7" category="list-text"><block ref="78b8a8015761a257c74b564dd2abedb7" category="inline-link-macro-rx"></block></block>
   <block id="409fc503ea2d6bb152d59bd69bc62da1" category="list-text"><block ref="64d8cd637ec67c4c29a88e65debc8c1c" category="inline-link-macro-rx"></block> 建议</block>
   <block id="f2b4c219933d07cd50ec18d34e212cb0" category="list-text"><block ref="f2b4c219933d07cd50ec18d34e212cb0" category="inline-link-macro-rx"></block></block>
   <block id="df1c09f38cb6ed31cef1e1ebdd55725b" category="list-text"><block ref="6ec6dd68b99ef46ea5ce712a62b5fa12" category="inline-link-macro-rx"></block> 建议</block>
@@ -442,4 +439,7 @@
   <block id="1eec33c68401a6eebb58a392153f045b" category="admonition">如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。</block>
   <block id="a5cc9f7714a0767ece3c08caff06314d" category="list-text">从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 工作环境中以打开存储类向导。</block>
   <block id="19f4ed17c6ec00f67063b70e40bfc661" category="section-title">2022年5月4日</block>
+  <block id="1606152a3618fafce11bc6518f0f1bcd" category="list-text"><block ref="1606152a3618fafce11bc6518f0f1bcd" category="inline-link-macro-rx"></block></block>
+  <block id="815b0d9e518d5ff6acd03b45817471e1" category="list-text"><block ref="815b0d9e518d5ff6acd03b45817471e1" category="inline-link-macro-rx"></block></block>
+  <block id="4d979d0ea20d1583e255531fa8b3e472" category="list-text"><block ref="4d979d0ea20d1583e255531fa8b3e472" category="inline-link-macro-rx"></block></block>
 </blocks>
