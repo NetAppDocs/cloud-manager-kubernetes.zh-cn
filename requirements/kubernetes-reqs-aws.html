@@ -691,7 +691,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 13:57:05 +0000">04/15/2022</time>
+    <time datetime="2022-06-01 18:42:21 +0000">06/01/2022</time>
     
   
 
@@ -1075,14 +1075,62 @@ roleRef:
 </div>
 </li>
 <li>
-<p>使用 <code>eksctl</code> 创建与权限组的标识映射。下面提供了一个示例。</p>
+<p>创建与权限组的标识映射。</p>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">使用 eksctl</div>
+<div class="content">
+<div class="paragraph">
+<p>使用 eksctl 在集群与 Cloud Manager Connector 的 IAM 角色之间创建 IAM 身份映射。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://eksctl.io/usage/iam-identity-mappings/" target="_blank" rel="noopener">"有关完整说明，请参见 eksctl 文档"</a>。</p>
+</div>
+<div class="paragraph">
+<p>下面提供了一个示例。</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-eksctl" data-lang="eksctl">eksctl create iamidentitymapping --cluster &lt;eksCluster&gt; --region &lt;us-east-2&gt; --arn &lt;ARN of the Connector IAM role&gt; --group cloudmanager-access-group --username system:node:{{EC2PrivateDNSName}}</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">编辑 AWS-auth</div>
+<div class="content">
 <div class="paragraph">
-<p><a href="https://eksctl.io/usage/iam-identity-mappings/" target="_blank" rel="noopener">"有关完整说明，请参见 eksctl 文档"</a>。</p>
+<p>直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html" target="_blank" rel="noopener">"有关完整说明，请参见 AWS EKS 文档"</a>。</p>
+</div>
+<div class="paragraph">
+<p>下面提供了一个示例。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - cloudmanager-access-group
+      rolearn: &lt;ARN of the Connector IAM role&gt;
+     username: system:node:{{EC2PrivateDNSName}}
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2021-09-30T21:09:18Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1021"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
+  uid: dcc31de5-3838-11e8-af26-02e00430057c</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </li>
 </ol>
