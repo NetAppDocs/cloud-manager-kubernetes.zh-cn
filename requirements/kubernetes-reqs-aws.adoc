@@ -277,13 +277,49 @@ kubectl apply -f <file-name>
 ----
 
 
-. 使用 `eksctl` 创建与权限组的标识映射。下面提供了一个示例。
+. 创建与权限组的标识映射。
 +
+[role="tabbed-block"]
+====
+.使用 eksctl
+--
+使用 eksctl 在集群与 Cloud Manager Connector 的 IAM 角色之间创建 IAM 身份映射。
+
+https://eksctl.io/usage/iam-identity-mappings/["有关完整说明，请参见 eksctl 文档"^]。
+
+下面提供了一个示例。
+
 [source, eksctl]
 ----
 eksctl create iamidentitymapping --cluster <eksCluster> --region <us-east-2> --arn <ARN of the Connector IAM role> --group cloudmanager-access-group --username system:node:{{EC2PrivateDNSName}}
 ----
-+
-https://eksctl.io/usage/iam-identity-mappings/["有关完整说明，请参见 eksctl 文档"^]。
+--
+.编辑 AWS-auth
+--
+直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。
 
+https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html["有关完整说明，请参见 AWS EKS 文档"^]。
+
+下面提供了一个示例。
+
+[source, yaml]
+----
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - cloudmanager-access-group
+      rolearn: <ARN of the Connector IAM role>
+     username: system:node:{{EC2PrivateDNSName}}
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2021-09-30T21:09:18Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1021"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
+  uid: dcc31de5-3838-11e8-af26-02e00430057c
+----
+--
+====
 

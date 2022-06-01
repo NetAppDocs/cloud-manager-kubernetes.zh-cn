@@ -341,7 +341,6 @@
   <block id="c933a937af3266562155099a4ad44e14" category="paragraph"><block ref="c933a937af3266562155099a4ad44e14" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d1c51ee4ad82e26c7069e126c0a5d25d" category="paragraph">要启用不同的功能，需要不同的授权。</block>
   <block id="12fb6938fb90a471014c2abce44ca15b" category="list-text">根据您的授权要求创建包含以下文本的 YAML 文件。</block>
-  <block id="e4e88e99e021b78e80ca0c688485ea20" category="list-text">使用 `eksctl` 创建与权限组的标识映射。下面提供了一个示例。</block>
   <block id="fe56eccd77db48009fae1416eb34f4bd" category="summary">您可以使用 Cloud Manager 安装 Astra Trident ，配置存储类，删除集群以及启用数据服务。</block>
   <block id="384b71db954a7a463c759208283e47c4" category="doc">管理 Kubernetes 集群</block>
   <block id="7e60eeaefc6a3c5fb637acd03070a64a" category="paragraph">将 Kubernetes 集群添加到 Cloud Manager 后，您可以从资源页面管理这些集群。要打开资源页面，请双击 Canvas 上的 Kubernetes 工作环境。</block>
@@ -442,4 +441,12 @@
   <block id="79ee39f20c9b076e39473401e33c5f12" category="list-text"><block ref="79ee39f20c9b076e39473401e33c5f12" category="inline-link-macro-rx"></block></block>
   <block id="df02ebf4bbdbd23dcf4001f89e193718" category="list-text"><block ref="df02ebf4bbdbd23dcf4001f89e193718" category="inline-link-macro-rx"></block></block>
   <block id="0d66e7de3df254882c2f4ec49e44ba2f" category="list-text"><block ref="0d66e7de3df254882c2f4ec49e44ba2f" category="inline-link-macro-rx"></block></block>
+  <block id="f08cfbb10dc9216a72c9d59da3c626b8" category="list-text">创建与权限组的标识映射。</block>
+  <block id="bcac99b7c9956d05f17a4e4f9649da71" category="open-title">使用 eksctl</block>
+  <block id="f7e12246f1ebd24c7f1a6460919e9bd3" category="paragraph">使用 eksctl 在集群与 Cloud Manager Connector 的 IAM 角色之间创建 IAM 身份映射。</block>
+  <block id="13225b5885ac45d1b5d3019c9de2e513" category="paragraph">下面提供了一个示例。</block>
+  <block id="a36cee8f656cd9e61ae5593885084071" category="open-title">编辑 AWS-auth</block>
+  <block id="de4e940a00cd2a48720f3f12fb53e9a7" category="paragraph">直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。</block>
+  <block id="434f77de052a92ee529d95ba80f3bab4" category="inline-link">有关完整说明，请参见 AWS EKS 文档</block>
+  <block id="05dcb2fa0de0a4549322d783d2f5e5fb" category="paragraph"><block ref="7af1dbb48bd59e8f995e1a97be9e70f8" category="inline-link-rx"></block>。</block>
 </blocks>
