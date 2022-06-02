@@ -7,6 +7,19 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
+  filter:
+    label: 云提供商
+    default: 所有云提供商
+    options:
+    - name: Amazon Web Services
+      alias: AWS
+      id: aws
+    - name: Google Cloud
+      alias: Google Cloud
+      id: gcp
+    - name: Microsoft Azure
+      alias: Azure 酒店
+      id: azure
   langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
 sidebar:
   entries:
@@ -25,18 +38,24 @@ sidebar:
   - title: 要求
     entries:
     - title: AWS 上的 Kubernetes 集群
+      flavor: aws
       url: "/requirements/kubernetes-reqs-aws.html"
     - title: Azure 上的 Kubernetes 集群
+      flavor: azure
       url: "/requirements/kubernetes-reqs-aks.html"
     - title: Google Cloud 上的 Kubernetes 集群
+      flavor: gcp
       url: "/requirements/kubernetes-reqs-gke.html"
   - title: 添加 Kubernetes 集群
     entries:
     - title: 在 AWS 上添加集群
+      flavor: aws
       url: "/task/task-kubernetes-discover-aws.html"
     - title: 在 Azure 上添加集群
+      flavor: azure
       url: "/task/task-kubernetes-discover-azure.html"
     - title: 在 Google Cloud 上添加集群
+      flavor: gcp
       url: "/task/task-kubernetes-discover-gke.html"
   - title: 管理 Kubernetes 集群
     url: "/concept-manage-k8s.html"
@@ -72,18 +91,24 @@ homepage:
   - title: 要求
     links:
     - title: AWS 上的 Kubernetes 集群
+      flavor: aws
       url: "/requirements/kubernetes-reqs-aws.html"
     - title: Azure 上的 Kubernetes 集群
+      flavor: azure
       url: "/requirements/kubernetes-reqs-aks.html"
     - title: Google Cloud 上的 Kubernetes 集群
+      flavor: gcp
       url: "/requirements/kubernetes-reqs-gke.html"
   - title: 添加 Kubernetes 集群
     links:
     - title: 在 AWS 上添加集群
+      flavor: aws
       url: "/task/task-kubernetes-discover-aws.html"
     - title: 在 Azure 上添加集群
+      flavor: azure
       url: "/task/task-kubernetes-discover-azure.html"
     - title: 在 Google Cloud 上添加集群
+      flavor: gcp
       url: "/task/task-kubernetes-discover-gke.html"
   - title: 管理 Kubernetes 集群
     links:

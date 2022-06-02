@@ -357,12 +357,6 @@
   <block id="ef1bf4095b622ba80ac24b48b8e45eac" category="section-title">2022 年 1 月 11 日</block>
   <block id="f61163b681442ac500a8018c87241770" category="section-title">2021 年 11 月 28 日</block>
   <block id="49884bb39e4730239c5590a42f88d306" category="paragraph">要了解有关 Astra Trident 的更多信息，请参见 <block ref="d243cca937364184efa824b0525b876a" category="inline-link-macro-rx"></block>。</block>
-  <block id="72cf03e83eb761652a0d13086f72c9d7" category="paragraph"><block ref="72cf03e83eb761652a0d13086f72c9d7" category="inline-link-macro-rx"></block></block>
-  <block id="4a485bbe8e1857cd9e015d159f30b24d" category="paragraph"><block ref="4a485bbe8e1857cd9e015d159f30b24d" category="inline-link-macro-rx"></block></block>
-  <block id="a29db47c768f9047aab40d9abfb20adb" category="paragraph"><block ref="a29db47c768f9047aab40d9abfb20adb" category="inline-link-macro-rx"></block></block>
-  <block id="1cc3b91ac3f47d8a34620fe828068db4" category="paragraph"><block ref="1cc3b91ac3f47d8a34620fe828068db4" category="inline-link-macro-rx"></block></block>
-  <block id="6ba362adaf84a4c90e3a5e2018f325f2" category="paragraph"><block ref="6ba362adaf84a4c90e3a5e2018f325f2" category="inline-link-macro-rx"></block></block>
-  <block id="cfc29f6918b9699178c2eb110f408c5c" category="paragraph"><block ref="cfc29f6918b9699178c2eb110f408c5c" category="inline-link-macro-rx"></block></block>
   <block id="409fc503ea2d6bb152d59bd69bc62da1" category="list-text"><block ref="64d8cd637ec67c4c29a88e65debc8c1c" category="inline-link-macro-rx"></block> 建议</block>
   <block id="f2b4c219933d07cd50ec18d34e212cb0" category="list-text"><block ref="f2b4c219933d07cd50ec18d34e212cb0" category="inline-link-macro-rx"></block></block>
   <block id="df1c09f38cb6ed31cef1e1ebdd55725b" category="list-text"><block ref="6ec6dd68b99ef46ea5ce712a62b5fa12" category="inline-link-macro-rx"></block> 建议</block>
@@ -449,4 +443,23 @@
   <block id="de4e940a00cd2a48720f3f12fb53e9a7" category="paragraph">直接编辑 AWS-auth ConfigMap ，以便为 Cloud Manager Connector 的 IAM 角色添加 RBAC 访问权限。</block>
   <block id="434f77de052a92ee529d95ba80f3bab4" category="inline-link">有关完整说明，请参见 AWS EKS 文档</block>
   <block id="05dcb2fa0de0a4549322d783d2f5e5fb" category="paragraph"><block ref="7af1dbb48bd59e8f995e1a97be9e70f8" category="inline-link-rx"></block>。</block>
+  <block id="36e8382aa83e74f8ba70303f62ce8d15" category="paragraph"><block ref="36e8382aa83e74f8ba70303f62ce8d15" category="inline-link-macro-rx"></block></block>
+  <block id="8a7acc1f3e4ade2ee389a4e59f39bf28" category="paragraph"><block ref="8a7acc1f3e4ade2ee389a4e59f39bf28" category="inline-link-macro-rx"></block></block>
+  <block id="2bdb06b2a7060e3efbb60c6fdf551284" category="paragraph"><block ref="2bdb06b2a7060e3efbb60c6fdf551284" category="inline-link-macro-rx"></block></block>
+  <block id="187496d0d891ffe76a43f6ffdd995505" category="paragraph"><block ref="187496d0d891ffe76a43f6ffdd995505" category="inline-link-macro-rx"></block></block>
+  <block id="e72a8a52b20d0b466a3152c8c60b4f2b" category="paragraph"><block ref="e72a8a52b20d0b466a3152c8c60b4f2b" category="inline-link-macro-rx"></block></block>
+  <block id="09e2861e1b9bab7606bd9fd36b62d621" category="paragraph"><block ref="09e2861e1b9bab7606bd9fd36b62d621" category="inline-link-macro-rx"></block></block>
+  <block id="e29d7c0b36af68edd13ebac84f15b44b" category="sidebar">云提供商</block>
+  <block id="46aef2e5080a5347df1ce7546e1be1df" category="sidebar">所有云提供商</block>
+  <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">Amazon Web Services</block>
+  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
+  <block id="56ef2682280ac110060b881925a87b80" category="sidebar">Google Cloud</block>
+  <block id="1668ca1bd914c1d847f23b491319ac91" category="sidebar">Microsoft Azure</block>
+  <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure 酒店</block>
+  <block id="5a81378cdc7edd9ea960cf02d6ca78d2" category="paragraph">ifdef::aws[]</block>
+  <block id="6beb2fa01dc121194547db1bfbe03408" category="paragraph">endif::aws[]</block>
+  <block id="b010c7530103ef9947582474d65ff9a3" category="paragraph">ifdef::azure[]</block>
+  <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
+  <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
+  <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
 </blocks>
