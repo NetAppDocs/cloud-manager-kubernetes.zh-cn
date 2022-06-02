@@ -31,7 +31,7 @@ image:screenshot-k8s-define-storage-class.png["显示 K8s 存储类定义选项�
 
 . 选择要连接到集群的工作环境。单击 * 添加 * 。
 +
-image:screenshot-k8s-we-storage-class.png["显示为 Kubernetes 集群选择工作环境的屏幕截图。"]
+image:screenshot-k8s-select-storage-class.png["显示为 Kubernetes 集群选择工作环境的屏幕截图。"]
 
 
 

@@ -20,4 +20,4 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetAp
 
 link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-kubernetes-backup-to-cloud.html["了解如何使用 Cloud Backup 保护 Kubernetes 集群数据"^]。
 
-image:screenshot-kubernetes-backup.png["Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。"]
+image:screenshot-k8s-backup.png["Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。"]
