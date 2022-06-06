@@ -23,9 +23,7 @@ settings:
   langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: 所有 Cloud Manager 文档
-    url: https://docs.netapp.com/us-en/cloud-manager-family
-  - title: Kubernetes 文档
+  - title: Kubernetes集群文档
     url: "/index.html"
   - title: 发行说明
     url: "/whats-new.html"
@@ -139,3 +137,4 @@ homepage:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
+  sidebar_label: All Cloud Manager documentation

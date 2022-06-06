@@ -195,8 +195,6 @@
   <block id="bb45c01f0defa7d4025530e60da27413" category="list-text">上传 Kubernetes 集群管理员提供的集群证书。</block>
   <block id="88191bdb31785cfc9f3930579c08bc01" category="inline-image-macro">用于上传证书颁发机构，客户端密钥和客户端证书的集群证书页面的屏幕截图。</block>
   <block id="590894349703ecdfd70867c311b0ca06" category="paragraph"><block ref="590894349703ecdfd70867c311b0ca06" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
-  <block id="f583f925a6121ffc465f204cf97e47f2" category="sidebar">Kubernetes 文档</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="9a389df4347e021124f6973de0521d46" category="sidebar">了解 Kubernetes 数据管理</block>
@@ -427,7 +425,6 @@
   <block id="0f808082ee99c2acfbcb1661162034f6" category="paragraph">现在、您可以将Kubernetes集群拖放到Cloud Volumes ONTAP 工作环境中、以便直接从Canvas添加存储类。</block>
   <block id="d23895cd28f2e8e5d3074279cea7aacf" category="inline-link-macro">添加存储类</block>
   <block id="2556925e0b340fdd647987c6af7fbee9" category="paragraph"><block ref="2556925e0b340fdd647987c6af7fbee9" category="inline-link-macro-rx"></block></block>
-  <block id="1eec33c68401a6eebb58a392153f045b" category="admonition">如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。</block>
   <block id="a5cc9f7714a0767ece3c08caff06314d" category="list-text">从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 工作环境中以打开存储类向导。</block>
   <block id="19f4ed17c6ec00f67063b70e40bfc661" category="section-title">2022年5月4日</block>
   <block id="79ee39f20c9b076e39473401e33c5f12" category="list-text"><block ref="79ee39f20c9b076e39473401e33c5f12" category="inline-link-macro-rx"></block></block>
@@ -462,4 +459,6 @@
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
   <block id="9caa4ae51ebcef018806ad6f192f8ff2" category="paragraph"><block ref="9caa4ae51ebcef018806ad6f192f8ff2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8fe98c5be333c8d7ddf225ff536de10d" category="paragraph"><block ref="8fe98c5be333c8d7ddf225ff536de10d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3addf40fe274281b5a1b857dc827df3" category="admonition">如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。</block>
+  <block id="61d60f1794bd3201467c51134b8ed076" category="sidebar">Kubernetes集群文档</block>
 </blocks>
