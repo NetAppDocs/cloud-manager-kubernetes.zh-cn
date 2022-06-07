@@ -51,7 +51,7 @@ Cloud Manager 支持在以下环境中运行的受管 Kubernetes 集群：
 
 == 支持的后端存储
 
-必须在每个 Kubernetes 集群上安装 NetApp 的 Astra Trident ，并且必须将 Cloud Volumes ONTAP 配置为集群的后端存储。
+必须在每个Kubernetes集群上安装NetApp的Astra Trident、并且必须将Cloud Volumes ONTAP 或Amazon FSx for ONTAP 配置为集群的后端存储。
 
 
 

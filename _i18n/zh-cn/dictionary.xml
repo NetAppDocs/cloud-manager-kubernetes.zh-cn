@@ -18,7 +18,6 @@
   <block id="a0d9f3ae32f1b7df23e0071308b6cbe5" category="inline-image-macro">Cloud Backup Service 中的 Kubernetes 页面的屏幕截图，其中显示了 Kubernetes 集群的五个备份作业。</block>
   <block id="acb13b8754d0f14e58090cb4826d589f" category="section-title">支持的 Kubernetes 部署</block>
   <block id="c9ece1f2227c56942142d90092ca7fd2" category="section-title">支持的后端存储</block>
-  <block id="55a560dfd687efd2106430144cfa5892" category="paragraph">必须在每个 Kubernetes 集群上安装 NetApp 的 Astra Trident ，并且必须将 Cloud Volumes ONTAP 配置为集群的后端存储。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
   <block id="57d339f02c71bab84597b5d0376d3fc5" category="paragraph">在 Cloud Manager 中发现您的 Kubernetes 集群不收取任何费用，但在使用 Cloud Backup Service 备份永久性卷时，系统会向您收取费用。</block>
   <block id="857ece793bdfd4681e9906a6a9eb9083" category="summary">在将 Amazon Elastic Kubernetes Service （ Amazon EKS ）集群添加到 Cloud Manager 之前，您需要确保满足以下要求。</block>
@@ -461,4 +460,7 @@
   <block id="8fe98c5be333c8d7ddf225ff536de10d" category="paragraph"><block ref="8fe98c5be333c8d7ddf225ff536de10d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d3addf40fe274281b5a1b857dc827df3" category="admonition">如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。</block>
   <block id="61d60f1794bd3201467c51134b8ed076" category="sidebar">Kubernetes集群文档</block>
+  <block id="62ee9336109ed1c4538423613b856682" category="section-title">2022年6月6日</block>
+  <block id="cd6d587cb36421715f3cc24a2c91aef6" category="paragraph">Cloud Manager现在支持将Amazon FSX for ONTAP 用作后端存储。</block>
+  <block id="f0b34badcd6be375b0501deb67b70346" category="paragraph">必须在每个Kubernetes集群上安装NetApp的Astra Trident、并且必须将Cloud Volumes ONTAP 或Amazon FSx for ONTAP 配置为集群的后端存储。</block>
 </blocks>
