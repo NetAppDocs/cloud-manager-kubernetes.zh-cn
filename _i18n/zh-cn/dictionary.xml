@@ -463,4 +463,8 @@
   <block id="62ee9336109ed1c4538423613b856682" category="section-title">2022年6月6日</block>
   <block id="cd6d587cb36421715f3cc24a2c91aef6" category="paragraph">Cloud Manager现在支持将Amazon FSX for ONTAP 用作后端存储。</block>
   <block id="f0b34badcd6be375b0501deb67b70346" category="paragraph">必须在每个Kubernetes集群上安装NetApp的Astra Trident、并且必须将Cloud Volumes ONTAP 或Amazon FSx for ONTAP 配置为集群的后端存储。</block>
+  <block id="624105df248e28f049a2f58eb3552d40" category="list-text">EC2：Describe注册</block>
+  <block id="b272876bb8d27e636bb70f2dce15cb34" category="list-text">EKS：ListClusters</block>
+  <block id="457a1b6178515d282232753f808e8cf5" category="list-text">EKS：Describe集群</block>
+  <block id="53ac904630fdbb4d62f208e001934c7c" category="list-text">IAM：GetInstanceProfile</block>
 </blocks>
