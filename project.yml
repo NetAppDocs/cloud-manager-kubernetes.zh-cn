@@ -58,7 +58,7 @@ sidebar:
   - title: 管理 Kubernetes 集群
     url: "/concept-manage-k8s.html"
     entries:
-    - title: 安装 Astra Trident
+    - title: 安装或升级Astra Trident
       url: "/task/task-k8s-manage-trident.html"
     - title: 管理存储类
       url: "/task/task-k8s-manage-storage-classes.html"

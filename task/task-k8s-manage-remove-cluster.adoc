@@ -14,7 +14,7 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud
 
 
 [role="lead"]
-将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 从工作空间中删除集群。
+将受管Kubernetes集群添加到Canvas后、您可以使用Cloud Manager从工作空间中删除集群。
 
 .步骤
 . 双击 Canvas 上的 Kubernetes 工作环境或单击 * 进入工作环境 * 。

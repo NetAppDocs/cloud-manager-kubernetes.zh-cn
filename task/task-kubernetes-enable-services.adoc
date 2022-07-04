@@ -14,9 +14,9 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetAp
 
 
 [role="lead"]
-将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 NetApp 云数据服务进行高级数据管理。
+将受管Kubernetes集群添加到Canvas后、您可以使用NetApp云数据服务进行高级数据管理。
 
-目前， Kubernetes 集群支持 Cloud Backup 。您可以使用 Cloud Backup 将永久性卷备份到对象存储。
+您可以使用 Cloud Backup 将永久性卷备份到对象存储。
 
 link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-kubernetes-backup-to-cloud.html["了解如何使用 Cloud Backup 保护 Kubernetes 集群数据"^]。
 

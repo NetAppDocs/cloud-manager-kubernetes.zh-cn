@@ -20,9 +20,9 @@ Astra Trident 是由 NetApp 维护的一个完全受支持的开源项目。Astr
 
 == 功能
 
-您可以使用 Cloud Manager 直接管理 Kubernetes 集群。
+通过使用Trident操作员部署的兼容版本的Astra Trident、您可以使用Cloud Manager直接管理Kubernetes集群。
 
-* 安装 Astra Trident 。
+* 安装或升级Astra Trident。
 * 在混合云基础架构中添加和管理集群。
 * 添加和管理存储类并将其连接到工作环境。
 * 使用 Cloud Backup Service 备份永久性卷。
@@ -43,15 +43,17 @@ Cloud Manager 支持在以下环境中运行的受管 Kubernetes 集群：
 
 == 支持的 Astra Trident 部署
 
-需要使用四个最新版本的 Astra Trident 之一。您可以直接从 Cloud Manager 安装 Astra Trident 。您应该 link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["查看前提条件"^] 安装前。
+Astra Trident的四个最新版本之一 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html["使用Trident操作符部署"^] 为必填项。
 
-要升级 Astra Trident ， link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html["使用操作员升级"^]。
+您可以直接从Cloud Manager安装或升级到最新版本的Astra Trident。
+
+link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["查看Astra Trident前提条件"^]
 
 
 
 == 支持的后端存储
 
-必须在每个Kubernetes集群上安装NetApp的Astra Trident、并且必须将Cloud Volumes ONTAP 或Amazon FSx for ONTAP 配置为集群的后端存储。
+必须在每个Kubernetes集群上安装NetApp Astra Trident、并且必须将Cloud Volumes ONTAP 或Amazon FSx for ONTAP 配置为集群的后端存储。
 
 
 

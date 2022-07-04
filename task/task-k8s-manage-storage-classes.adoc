@@ -14,7 +14,7 @@ summary: 将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud
 
 
 [role="lead"]
-将受管 Kubernetes 集群添加到 Canvas 后，您可以使用 Cloud Manager 管理存储类。
+将受管Kubernetes集群添加到Canvas后、您可以使用Cloud Manager管理存储类。
 
 
 NOTE: 如果未定义存储类、则集群将显示需要执行操作。双击Canvas上的集群将打开操作页面以添加存储类。
@@ -24,7 +24,7 @@ NOTE: 如果未定义存储类、则集群将显示需要执行操作。双击Ca
 == 添加存储类
 
 .步骤
-. 从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 工作环境中以打开存储类向导。
+. 从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 或Amazon FSx for ONTAP 工作环境中、以打开存储类向导。
 . 提供存储类的名称，选择定义选项，然后单击 * 下一步 * 。
 +
 image:screenshot-k8s-define-storage-class.png["显示 K8s 存储类定义选项的屏幕截图。"]
