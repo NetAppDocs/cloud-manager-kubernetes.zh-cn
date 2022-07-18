@@ -54,7 +54,6 @@
   <block id="4b1c304f38c097ba7776b76e4e099d42" category="inline-image-macro">AWS 控制台的屏幕截图，显示权限选项卡中的编辑策略按钮。</block>
   <block id="f96de5b5f8572ecb3c2c80e8156181f8" category="list-text">单击 * 。 JSON* ，然后在第一组操作下添加以下权限：</block>
   <block id="e72ae7637ee4c3c3135530cf7abf3ea9" category="inline-link">查看策略的完整 JSON 格式</block>
-  <block id="377d2375cdf41d8fe094ff8bcedcb12b" category="paragraph"><block ref="8eeee6ade5612bec522e249ee65dc7db" category="inline-link-rx"></block>。</block>
   <block id="e42b9312c7c895b2124ac455c7ffecd4" category="list-text">单击 * 查看策略 * ，然后单击 * 保存更改 * 。</block>
   <block id="1fd9ae23d87dd564d70e8a3a729edec0" category="section-title">查看网络连接要求</block>
   <block id="a5a2f901b1e6769a95c7cafa0f439cd3" category="paragraph">您需要在 Kubernetes 集群和 Connector 之间以及 Kubernetes 集群与为集群提供后端存储的 Cloud Volumes ONTAP 系统之间提供网络连接。</block>
@@ -487,4 +486,5 @@
   <block id="7d3743c0dc40fd5a7d78e22b9d4f94d4" category="list-text">如果安装了不受支持的Astra Trident版本、请单击*升级Trident *。</block>
   <block id="9a0e220ebe1a9271b56057d3ae4b2a8f" category="paragraph">将受管Kubernetes集群添加到Canvas后、您可以使用Cloud Manager管理存储类。</block>
   <block id="319a42bc8932c7d4f9387e0c5de9c64c" category="list-text">从"画布"中、将Kubernetes工作环境拖放到Cloud Volumes ONTAP 或Amazon FSx for ONTAP 工作环境中、以打开存储类向导。</block>
+  <block id="622535c1c45bf857c104b24a29a940e1" category="paragraph"><block ref="622535c1c45bf857c104b24a29a940e1" category="inline-link-rx"></block></block>
 </blocks>
